@@ -42,7 +42,6 @@ function itemActive(it) {
   return isActive(it?.href);
 }
 
-// ✅ ferme le dropdown quand la route change
 watch(
   () => route.fullPath,
   () => close()
@@ -138,7 +137,6 @@ button.active::after {
   transform: scaleX(1);
 }
 
-/* menu follows theme via tokens */
 .menu {
   position: absolute;
   top: calc(100% + 10px);
@@ -170,7 +168,6 @@ button.active::after {
   background: var(--menu-item-hover-bg);
 }
 
-/* ✅ active item (works for our class + router default classes) */
 .menuItem.active,
 .menuItem.router-link-active,
 .menuItem.router-link-exact-active {

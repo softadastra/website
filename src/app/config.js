@@ -21,10 +21,24 @@ export const NAV = [
     label: "Products",
     href: ROUTES.products,
     items: [
-      { label: "Vix.cpp Runtime", href: ROUTES.productVix },
-      { label: "Ivi.php Framework", href: ROUTES.productIvi },
-      { label: "Rix", href: ROUTES.productRix },
-      { label: "Cnerium", href: ROUTES.productCnerium },
+      {
+        label: "Vix.cpp Runtime",
+        href: ROUTES.productVix,
+        description:
+          "High-performance offline-first C++ runtime with sync and P2P core",
+      },
+      {
+        label: "Ivi.php Framework",
+        href: ROUTES.productIvi,
+        description:
+          "Minimal, expressive PHP framework for modern APIs and apps",
+      },
+      {
+        label: "Rix",
+        href: ROUTES.productRix,
+        description:
+          "Modern C++ utility and foundation library for Vix ecosystem",
+      },
     ],
   },
   { label: "Customers", href: ROUTES.customers },

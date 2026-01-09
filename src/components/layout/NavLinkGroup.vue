@@ -56,7 +56,6 @@ a:hover {
   color: var(--nav-text);
 }
 
-/* underline like vuejs.org */
 a::after {
   content: "";
   position: absolute;
@@ -72,7 +71,7 @@ a::after {
 }
 
 a:hover::after {
-  background: rgba(16, 185, 129, 0.55); /* subtle green underline */
+  background: rgba(16, 185, 129, 0.55);
   transform: scaleX(1);
 }
 
@@ -81,7 +80,7 @@ a.active {
 }
 
 a.active::after {
-  background: var(--sa-orange); /* active underline = Softadastra orange */
+  background: var(--sa-orange);
   transform: scaleX(1);
 }
 </style>
