@@ -6,7 +6,6 @@ import { NAV } from "../../app/config.js";
 const route = useRoute();
 
 function normalize(path) {
-  // garde simple : remove trailing slash
   if (!path) return "/";
   return path.length > 1 ? path.replace(/\/+$/, "") : path;
 }
@@ -27,7 +26,7 @@ function isActive(href) {
         <div>
           <RouterLink
             :to="group.href"
-            :aria-current="isActive(group.href) ? 'page' : null"
+            :class="{ active: isActive(group.href) }"
           >
             {{ group.label }}
           </RouterLink>
@@ -35,10 +34,7 @@ function isActive(href) {
 
         <ul v-if="group.items && group.items.length">
           <li v-for="(it, ii) in group.items" :key="ii">
-            <RouterLink
-              :to="it.href"
-              :aria-current="isActive(it.href) ? 'page' : null"
-            >
+            <RouterLink :to="it.href" :class="{ active: isActive(it.href) }">
               {{ it.label }}
             </RouterLink>
           </li>
@@ -47,3 +43,27 @@ function isActive(href) {
     </nav>
   </aside>
 </template>
+<style scoped>
+a {
+  display: inline-flex;
+  padding: 6px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--muted);
+}
+a:hover {
+  color: var(--text);
+}
+a.active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+ul {
+  margin: 8px 0 16px 0;
+  padding-left: 14px;
+}
+li {
+  list-style: none;
+  margin: 4px 0;
+}
+</style>
