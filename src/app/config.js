@@ -28,7 +28,6 @@ export const NAV = [
     ],
   },
   { label: "Customers", href: ROUTES.customers },
-
   {
     label: "Company",
     href: ROUTES.company,
@@ -51,7 +50,6 @@ export const NAV = [
       },
     ],
   },
-
   { label: "Docs", href: ROUTES.docs },
 ];
 

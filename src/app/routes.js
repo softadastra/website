@@ -1,9 +1,7 @@
 export const ROUTES = {
   home: "/",
 
-  // Website (top navbar)
-  docs: "/docs",
-
+  /* Marketing website */
   products: "/products",
   productVix: "/products/vix",
   productIvi: "/products/ivi",
@@ -18,7 +16,10 @@ export const ROUTES = {
   companyCulture: "/company/culture",
   companyContact: "/company/contact",
 
-  // Docs (sidebar only)
+  /* Docs */
+  docs: "/docs",
+
+  /* Docs: Foundation/Architecture/etc (comme avant, sous /docs) */
   foundation: "/docs/foundation",
   foundationWhat: "/docs/foundation/what-is",
   foundationPrinciples: "/docs/foundation/principles",
