@@ -113,7 +113,7 @@ import SitePage from "../../components/layout/SitePage.vue";
     <div class="sa-card">
       <p>
         Rix is open-source and designed to be adopted incrementally. Use only
-        what you need — nothing more.
+        what you need nothing more.
       </p>
 
       <div class="sa-actions">

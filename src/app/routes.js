@@ -3,10 +3,10 @@ export const ROUTES = {
 
   /* Marketing website */
   products: "/products",
-  productVix: "/products/vix",
-  productIvi: "/products/ivi",
-  productRix: "/products/rix",
-  productCnerium: "/products/cnerium",
+  productVix: "/vix",
+  productIvi: "/ivi",
+  productRix: "/rix",
+  productCnerium: "/cnerium",
 
   customers: "/customers",
 

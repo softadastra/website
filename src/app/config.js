@@ -20,7 +20,7 @@ export const LINKS = {
 
   // Contact
   engineersEmail:
-    "mailto:gaspardkirira9@gmail.com?subject=Vix.cpp%20-%20Talk%20to%20engineers",
+    "mailto:softadastra@gmail.com?subject=Vix.cpp%20-%20Talk%20to%20engineers",
 };
 
 /* Top navbar (website) */
