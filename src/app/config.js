@@ -13,6 +13,14 @@ export const LINKS = {
   github: "https://github.com/softadastra/softadastra",
   x: "https://x.com/softadastra",
   youtube: "https://youtube.com/@softadastra",
+
+  // Vix.cpp
+  vixGithub: "https://github.com/vixcpp/vix",
+  vixSite: "https://vixcpp.com",
+
+  // Contact
+  engineersEmail:
+    "mailto:gaspardkirira9@gmail.com?subject=Vix.cpp%20-%20Talk%20to%20engineers",
 };
 
 /* Top navbar (website) */
