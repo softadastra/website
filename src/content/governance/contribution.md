@@ -4,8 +4,6 @@ This document defines how contributions to Softadastra are handled.
 
 Because Softadastra is a foundational architecture, contribution rules are intentionally strict. The goal is to preserve coherence, correctness, and long-term viability.
 
----
-
 ## Contribution philosophy
 
 > **Softadastra values correctness and coherence over velocity.**
@@ -13,8 +11,6 @@ Because Softadastra is a foundational architecture, contribution rules are inten
 Not all contributions are equal, and not all parts of the system are equally open to change.
 
 The foundation must remain stable and internally consistent.
-
----
 
 ## What can be contributed
 
@@ -29,8 +25,6 @@ Contributions are welcome in the following areas:
 
 Documentation contributions are encouraged and prioritized.
 
----
-
 ### 2. Reference implementations
 
 Depending on the repository:
@@ -41,8 +35,6 @@ Depending on the repository:
 
 Only contributions that respect the documented principles and architecture will be accepted.
 
----
-
 ### 3. Tooling and utilities
 
 Contributions may include:
@@ -52,8 +44,6 @@ Contributions may include:
 - observability tooling
 
 These must not introduce unnecessary dependencies or complexity.
-
----
 
 ## What is not open for contribution
 
@@ -66,8 +56,6 @@ The following are not open for external contribution:
 
 These are defined and maintained by the core maintainers.
 
----
-
 ## Contribution process
 
 1. Open an issue describing the proposal
@@ -76,8 +64,6 @@ These are defined and maintained by the core maintainers.
 4. Discuss trade-offs explicitly
 
 Pull requests without prior discussion may be closed.
-
----
 
 ## Review criteria
 
@@ -89,8 +75,6 @@ All contributions are evaluated against:
 - clarity and explicitness
 
 Short-term gains do not justify long-term architectural risk.
-
----
 
 ## Maintainers and governance
 
@@ -104,15 +88,11 @@ Responsibilities:
 
 Decisions prioritize the foundation over individual preferences.
 
----
-
 ## Code of conduct
 
 All contributors are expected to engage respectfully and constructively.
 
 Technical disagreement is welcome. Personal attacks are not.
-
----
 
 ## Summary
 

@@ -14,8 +14,6 @@ These assumptions do not hold for most of the world, and they become increasingl
 
 Softadastra challenges these assumptions at the architectural level.
 
----
-
 ## Our belief
 
 > **A technology is mature only when it continues to work under bad conditions.**
@@ -27,8 +25,6 @@ Softadastra is built on the belief that:
 - offline is a normal state, not an error
 - local execution should be the default
 - the network is an optimization, not a dependency
-
----
 
 ## What we are rebuilding
 
@@ -42,8 +38,6 @@ Instead, it rebuilds its foundations around a different center of gravity:
 - **Peer-to-peer and edge networks** instead of centralized clouds
 
 This shift enables applications to remain usable, consistent, and recoverable even when the network is slow, intermittent, or unavailable.
-
----
 
 ## Long-term horizon
 
@@ -63,8 +57,6 @@ It is optimized for:
 
 Like other foundational technologies (operating systems, compilers, runtimes), Softadastra values stability and depth over speed.
 
----
-
 ## The role of products
 
 Products built under Softadastra (such as Softadastra Drive) are **expressions of the foundation**, not the foundation itself.
@@ -76,8 +68,6 @@ They serve to:
 - guide evolution of the core
 
 The foundation always comes first.
-
----
 
 ## Summary
 

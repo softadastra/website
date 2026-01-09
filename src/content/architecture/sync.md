@@ -4,8 +4,6 @@ This document describes the **synchronization engine**, the core primitive of So
 
 Softadastra is not built around request–response APIs. It is built around **durable state transitions** that can be replayed, synchronized, and reconciled under unreliable conditions.
 
----
-
 ## Why sync is the center
 
 In traditional systems:
@@ -24,8 +22,6 @@ The sync engine exists to ensure:
 - no loss of intent
 - recoverability after failure
 - eventual convergence of state
-
----
 
 ## Core concepts
 
@@ -51,8 +47,6 @@ Operations must be:
 
 Softadastra favors convergence under failure rather than strict immediate consistency.
 
----
-
 ## Components
 
 ### 1. Write-Ahead Log (WAL)
@@ -73,8 +67,6 @@ Requirements:
 
 The WAL is the source of truth for local intent.
 
----
-
 ### 2. Outbox
 
 The outbox is a queue of operations that must be delivered to other replicas.
@@ -88,8 +80,6 @@ Responsibilities:
 
 The outbox decouples local writes from network success.
 
----
-
 ### 3. Retry & backoff policy
 
 Network failures are expected.
@@ -102,8 +92,6 @@ Retry behavior must:
 - avoid thundering herds
 
 The retry policy is a core part of correctness, not a performance detail.
-
----
 
 ### 4. Acknowledgments and progress tracking
 
@@ -121,8 +109,6 @@ Progress tracking must be:
 - resumable after restarts
 - resistant to duplicates
 
----
-
 ### 5. Snapshotting
 
 Replaying an unbounded WAL is inefficient.
@@ -137,8 +123,6 @@ Snapshots must be:
 
 - derivable from WAL
 - consistent with recorded operations
-
----
 
 ## Conflict handling
 
@@ -160,8 +144,6 @@ Possible strategies:
 
 The foundation prioritizes safety and explicitness.
 
----
-
 ## Idempotency and deduplication
 
 Messages can be duplicated.
@@ -173,8 +155,6 @@ Therefore:
 - receivers must treat duplicates as normal
 
 Idempotency is required for correctness under unreliable transport.
-
----
 
 ## Ordering and causality
 
@@ -191,8 +171,6 @@ The sync engine must remain correct when messages arrive:
 - out of order
 - duplicated
 
----
-
 ## Observability
 
 Sync correctness must be observable.
@@ -206,8 +184,6 @@ The engine should expose:
 - time-to-converge metrics
 
 Observability is part of reliability.
-
----
 
 ## Summary
 

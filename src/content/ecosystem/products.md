@@ -4,8 +4,6 @@ Softadastra is a foundational architecture. Products built under the Softadastra
 
 This document explains the role of products within the Softadastra ecosystem.
 
----
-
 ## Products are expressions, not the foundation
 
 In Softadastra:
@@ -19,8 +17,6 @@ The direction of dependency is strict:
 
 Any product that requires bending core principles is invalid.
 
----
-
 ## Purpose of products
 
 Products serve several critical roles:
@@ -31,8 +27,6 @@ Products serve several critical roles:
 - demonstrate viability to engineers and stakeholders
 
 Products are tools for learning and validation, not shortcuts to redefine the architecture.
-
----
 
 ## Softadastra Drive
 
@@ -50,8 +44,6 @@ Drive is intentionally limited in scope.
 
 Its value is not feature richness, but architectural proof.
 
----
-
 ## Constraints on all products
 
 All Softadastra products must:
@@ -63,8 +55,6 @@ All Softadastra products must:
 - tolerate partial connectivity
 
 If a product cannot satisfy these constraints, it does not belong in the Softadastra ecosystem.
-
----
 
 ## Products are replaceable
 
@@ -78,8 +68,6 @@ They may be:
 
 The foundation must remain stable regardless of product lifecycle.
 
----
-
 ## What products are not
 
 Products are not:
@@ -89,8 +77,6 @@ Products are not:
 - marketing showcases
 
 They exist to strengthen the foundation, not to overshadow it.
-
----
 
 ## Future products
 
@@ -102,8 +88,6 @@ Future products may include:
 - reference edge deployments
 
 Each product must clearly state which part of the foundation it exercises.
-
----
 
 ## Summary
 

@@ -4,8 +4,6 @@ This document describes Softadastra’s networking layer.
 
 Softadastra does not assume stable connectivity or centralized servers. The network layer is designed to move synchronization data across unreliable environments using **secure peer-to-peer transport**, **edge relays**, and **store-and-forward** patterns.
 
----
-
 ## Role of the network layer
 
 The network layer exists to transport synchronization data.
@@ -19,8 +17,6 @@ Responsibilities:
 - deliver operations and acknowledgments
 - tolerate partial connectivity
 - support relays and store-and-forward paths
-
----
 
 ## Core design principles
 
@@ -51,8 +47,6 @@ The sync engine must not be coupled to a specific transport.
 
 The network layer provides transport adapters (direct, relay, edge).
 
----
-
 ## Communication model
 
 Softadastra exchanges:
@@ -62,8 +56,6 @@ Softadastra exchanges:
 - control messages (handshake, ping/pong)
 
 The system favors small, explicit messages that can be retried and deduplicated.
-
----
 
 ## Peer lifecycle
 
@@ -106,8 +98,6 @@ The network layer monitors peer liveness:
 
 Liveness is required for outbox scheduling and retry decisions.
 
----
-
 ## Routing and relaying
 
 Direct peer-to-peer connectivity is not always possible.
@@ -127,8 +117,6 @@ Therefore, Softadastra supports:
 
 Store-and-forward is central for environments with intermittent reachability.
 
----
-
 ## Edge nodes
 
 Edge nodes are network participants optimized for:
@@ -145,8 +133,6 @@ They may provide:
 - optional indexing services
 
 Edge nodes improve performance and reach without creating a mandatory central authority.
-
----
 
 ## Message properties
 
@@ -172,8 +158,6 @@ To prevent overload:
 - send queues must be bounded
 - retry policies must respect congestion
 
----
-
 ## Vix.cpp as a reference transport stack
 
 Vix.cpp provides a reference implementation of the Softadastra network layer.
@@ -185,8 +169,6 @@ It includes:
 - peer discovery and messaging primitives
 
 The Softadastra network layer may use other stacks, but they must satisfy the same guarantees.
-
----
 
 ## Summary
 

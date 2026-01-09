@@ -4,8 +4,6 @@ Softadastra is a foundational architecture, not a single implementation.
 
 This document explains how multiple technology stacks can coexist within the Softadastra ecosystem while remaining aligned with the same core principles.
 
----
-
 ## Foundation vs. implementations
 
 Softadastra defines:
@@ -21,8 +19,6 @@ Softadastra does **not** mandate:
 - a single deployment model
 
 Any stack is acceptable if it conforms to the foundation principles.
-
----
 
 ## Primary reference stack: Vix.cpp
 
@@ -43,8 +39,6 @@ In Softadastra, Vix.cpp commonly implements:
 - Sync engine components (where applicable)
 
 Vix.cpp is a strong fit when performance, control, and reliability are primary constraints.
-
----
 
 ## Bridge stack: Ivi.php
 
@@ -68,8 +62,6 @@ It must still respect Softadastra’s architectural constraints:
 - durable intent recording
 - explicit sync boundaries
 
----
-
 ## Multiple stacks, one architecture
 
 Softadastra encourages an ecosystem where:
@@ -79,8 +71,6 @@ Softadastra encourages an ecosystem where:
 - systems can evolve without lock-in
 
 This is critical for long-term adoption.
-
----
 
 ## Interoperability requirements
 
@@ -105,8 +95,6 @@ To ensure coherence, all stacks must share:
 
 Interoperability is achieved through explicit contracts, not implicit conventions.
 
----
-
 ## Future stacks
 
 Softadastra may later include additional stacks such as:
@@ -117,8 +105,6 @@ Softadastra may later include additional stacks such as:
 - specialized edge deployments
 
 The foundation remains unchanged.
-
----
 
 ## Summary
 

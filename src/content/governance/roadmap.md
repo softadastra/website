@@ -12,8 +12,6 @@ It is **not** a feature roadmap. It defines phases of maturity, focus areas, and
 
 Progress is measured by resilience, coherence, and correctness — not by user counts or marketing milestones.
 
----
-
 ## Phase 0 — Concept validation (completed)
 
 **Goal:** Establish a coherent foundation.
@@ -29,8 +27,6 @@ Success criteria:
 - clear architectural center (sync engine)
 - documented assumptions and constraints
 - internal consistency across documents
-
----
 
 ## Phase 1 — Foundation build (0–18 months)
 
@@ -56,8 +52,6 @@ Success criteria:
 - predictable recovery behavior
 - measurable convergence under intermittent connectivity
 
----
-
 ## Phase 2 — Targeted adoption (18–48 months)
 
 **Goal:** Enable external teams to adopt parts of the foundation.
@@ -81,8 +75,6 @@ Success criteria:
 - successful deployments in constrained environments
 - minimal need for architectural changes
 
----
-
 ## Phase 3 — Ecosystem consolidation (4–7 years)
 
 **Goal:** Establish Softadastra as a credible reference architecture.
@@ -104,8 +96,6 @@ Success criteria:
 - stable architectural contracts
 - growing but controlled contributor base
 - consistent behavior across implementations
-
----
 
 ## Phase 4 — Implicit standard (7–10 years)
 
@@ -129,8 +119,6 @@ Success criteria:
 - third-party implementations
 - architectural longevity
 
----
-
 ## What this roadmap avoids
 
 This roadmap deliberately avoids:
@@ -140,8 +128,6 @@ This roadmap deliberately avoids:
 - feature checklists
 
 Those are consequences of correctness, not drivers of it.
-
----
 
 ## Summary
 

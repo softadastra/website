@@ -6,8 +6,6 @@ Non-goals are as important as goals. They protect the foundation from dilution, 
 
 Any initiative that contradicts these non-goals must be rejected.
 
----
-
 ## 1. Not a frontend framework
 
 Softadastra is **not**:
@@ -17,8 +15,6 @@ Softadastra is **not**:
 - a design system
 
 UI technologies may be used on top of Softadastra, but they are not part of the foundation.
-
----
 
 ## 2. Not a cloud-first platform
 
@@ -30,8 +26,6 @@ Softadastra does **not** assume:
 
 Cloud-based deployments are optional optimizations, never dependencies.
 
----
-
 ## 3. Not a SaaS product
 
 Softadastra is **not**:
@@ -42,8 +36,6 @@ Softadastra is **not**:
 
 Products may be built on Softadastra, but the foundation itself is not a SaaS.
 
----
-
 ## 4. Not a short-term startup experiment
 
 Softadastra is not optimized for:
@@ -53,8 +45,6 @@ Softadastra is not optimized for:
 - short-term valuation
 
 It is a long-term infrastructure effort with a multi-year horizon.
-
----
 
 ## 5. Not "web for bad networks"
 
@@ -68,8 +58,6 @@ It is:
 
 Resilience is a universal requirement, not a niche feature.
 
----
-
 ## 6. Not a monolithic system
 
 Softadastra does **not** aim to be:
@@ -79,8 +67,6 @@ Softadastra does **not** aim to be:
 - a tightly coupled system
 
 Modularity and replaceability are core requirements.
-
----
 
 ## 7. Not an abstraction-heavy framework
 
@@ -92,8 +78,6 @@ Softadastra avoids:
 
 Explicit behavior and predictability are preferred over convenience.
 
----
-
 ## 8. Not backward-compatible at all costs
 
 Softadastra does not guarantee compatibility with:
@@ -104,8 +88,6 @@ Softadastra does not guarantee compatibility with:
 
 Breaking with outdated assumptions is sometimes necessary.
 
----
-
 ## 9. Not driven by market trends
 
 Softadastra does not chase:
@@ -115,8 +97,6 @@ Softadastra does not chase:
 - popularity metrics
 
 Adoption is a consequence of correctness, not a primary goal.
-
----
 
 ## Summary
 

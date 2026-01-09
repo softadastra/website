@@ -54,7 +54,11 @@ export const NAV = [
     label: "Company",
     href: ROUTES.company,
     items: [
-      { label: "About", href: ROUTES.companyAbout },
+      {
+        label: "About",
+        href: ROUTES.companyAbout,
+        description: "Make the web work everywhere.",
+      },
       {
         label: "Careers",
         href: ROUTES.companyCareers,

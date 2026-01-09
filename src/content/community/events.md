@@ -4,8 +4,6 @@ This document defines how community events related to Softadastra are organized 
 
 Events are considered an extension of the foundation’s communication and governance. Their purpose is to deepen understanding, not to generate hype.
 
----
-
 ## Purpose of events
 
 Softadastra events exist to:
@@ -16,8 +14,6 @@ Softadastra events exist to:
 - gather informed technical feedback
 
 Events are not marketing campaigns or product launches.
-
----
 
 ## Types of events
 
@@ -31,8 +27,6 @@ Focused presentations on:
 
 Talks prioritize depth and correctness over accessibility.
 
----
-
 ### 2. Design discussions
 
 Small-group discussions intended to:
@@ -42,8 +36,6 @@ Small-group discussions intended to:
 - surface edge cases
 
 Design discussions are moderated and goal-oriented.
-
----
 
 ### 3. Workshops and hack sessions
 
@@ -55,8 +47,6 @@ Hands-on sessions focused on:
 
 Workshops are exploratory, not feature-driven.
 
----
-
 ## Event principles
 
 All Softadastra events must follow these principles:
@@ -65,8 +55,6 @@ All Softadastra events must follow these principles:
 - **Honesty about limitations** : no overpromising
 - **Respect for long-term vision** : no pressure to pivot
 - **Small and focused** : scale is not the goal
-
----
 
 ## Audience
 
@@ -78,8 +66,6 @@ Events are primarily intended for:
 
 They are not optimized for general audiences or non-technical stakeholders.
 
----
-
 ## Frequency and scale
 
 Softadastra favors:
@@ -90,8 +76,6 @@ Softadastra favors:
 
 Large conferences or mass events are not a priority.
 
----
-
 ## Transparency and recordings
 
 When appropriate:
@@ -101,15 +85,11 @@ When appropriate:
 
 However, some design discussions may remain private to preserve focus and depth.
 
----
-
 ## Relationship to the roadmap
 
 Events do not drive the roadmap.
 
 They inform understanding, surface issues, and refine implementation details, but do not override architectural direction.
-
----
 
 ## Summary
 

@@ -4,8 +4,6 @@ This document defines how Softadastra communicates with its community.
 
 Communication is treated as part of the architecture: clarity, precision, and consistency are required to protect the foundation over time.
 
----
-
 ## Communication principles
 
 All communication around Softadastra follows these principles:
@@ -14,8 +12,6 @@ All communication around Softadastra follows these principles:
 - **Accuracy over speed** : it is acceptable to communicate slowly
 - **Depth over reach** : we prioritize understanding over visibility
 - **Consistency over novelty** : messages must align with the documented vision
-
----
 
 ## Target audiences
 
@@ -28,8 +24,6 @@ Softadastra communicates primarily with:
 
 Communication is not optimized for mass-market appeal.
 
----
-
 ## Official communication channels
 
 Softadastra may use the following channels:
@@ -40,8 +34,6 @@ Softadastra may use the following channels:
 - Public talks and recorded presentations
 
 Short-form social media is secondary and must not redefine the narrative.
-
----
 
 ## Tone and style
 
@@ -60,8 +52,6 @@ Avoid:
 
 Softadastra speaks in terms of constraints, trade-offs, and architecture.
 
----
-
 ## Announcements
 
 Announcements should:
@@ -71,8 +61,6 @@ Announcements should:
 - reference relevant documentation
 
 Announcements must not oversell progress or imply guarantees beyond what is implemented.
-
----
 
 ## Community discussions
 
@@ -90,8 +78,6 @@ They are not venues for:
 
 Moderation prioritizes signal over volume.
 
----
-
 ## Transparency
 
 Softadastra aims to be transparent about:
@@ -101,8 +87,6 @@ Softadastra aims to be transparent about:
 - long-term intent
 
 Uncertainty is acceptable. Ambiguity is not.
-
----
 
 ## Summary
 

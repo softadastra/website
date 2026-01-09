@@ -184,27 +184,6 @@ const mailtoEngineers = computed(() => {
               portability, and engineering-grade reliability so your teams can
               scale without surprises.
             </p>
-
-            <div class="actions">
-              <a class="btn primary" :href="mailtoDemo">Request a demo</a>
-              <a class="btn ghost" :href="mailtoEngineers"
-                >Talk to our engineers</a
-              >
-              <a
-                class="btn secondary"
-                href="https://github.com/vixcpp/vix"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on GitHub
-              </a>
-            </div>
-
-            <div class="miniMeta">
-              <span class="pill">Offline-first mindset</span>
-              <span class="pill">Portability-first</span>
-              <span class="pill">Predictable performance</span>
-            </div>
           </div>
 
           <div class="heroRight reveal">

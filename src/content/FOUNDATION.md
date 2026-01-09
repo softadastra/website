@@ -15,8 +15,6 @@ Softadastra replaces these assumptions with a different set of invariants:
 
 The result is a web runtime that remains correct, usable, and recoverable even when networks are unreliable or unavailable.
 
----
-
 ## The problem
 
 Most modern web systems implicitly rely on:
@@ -28,8 +26,6 @@ Most modern web systems implicitly rely on:
 When these assumptions break, systems fail catastrophically: writes are rejected, data is lost, and users are blocked.
 
 These failures are not edge cases — they are systemic.
-
----
 
 ## The Softadastra approach
 
@@ -44,8 +40,6 @@ Instead of request–response correctness, Softadastra guarantees:
 
 Synchronization is not an optimization layer — it is the foundation.
 
----
-
 ## Core architectural pillars
 
 Softadastra is structured around four cooperating layers:
@@ -57,8 +51,6 @@ Softadastra is structured around four cooperating layers:
 
 Each layer is independently useful, replaceable, and governed by explicit contracts.
 
----
-
 ## What Softadastra is not
 
 Softadastra is not:
@@ -69,8 +61,6 @@ Softadastra is not:
 - a short-term startup experiment
 
 Products may be built on Softadastra, but the foundation never depends on products.
-
----
 
 ## Products as validation
 
@@ -84,8 +74,6 @@ They:
 
 Products are intentionally constrained and replaceable.
 
----
-
 ## Long-term vision
 
 Softadastra is designed as a multi-decade foundation.
@@ -93,8 +81,6 @@ Softadastra is designed as a multi-decade foundation.
 The goal is not rapid adoption, but architectural correctness and resilience.
 
 Over time, Softadastra aims to become an implicit reference architecture for resilient, offline-first, and local-first web systems.
-
----
 
 ## Who Softadastra is for
 
@@ -106,8 +92,6 @@ Softadastra is built for:
 - teams requiring correctness under failure
 
 It is not optimized for rapid prototyping or short-term trends.
-
----
 
 ## Governance and stability
 
@@ -121,16 +105,12 @@ Changes are evaluated based on:
 
 This discipline is essential to preserve the foundation over time.
 
----
-
 ## Learn more
 
 - README: ./README.md
 - Architecture overview: ./architecture/overview.md
 - Roadmap: ./governance/roadmap.md
 - Principles: ./foundation/principles.md
-
----
 
 ## Closing note
 

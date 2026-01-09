@@ -4,8 +4,6 @@ This document describes the role and responsibilities of the **application runti
 
 The runtime is responsible for executing application logic locally and providing a stable execution environment that remains functional regardless of network conditions.
 
----
-
 ## Purpose of the runtime
 
 The runtime exists to ensure that applications:
@@ -16,8 +14,6 @@ The runtime exists to ensure that applications:
 - expose deterministic state changes to the sync engine
 
 In Softadastra, the runtime is not a thin client — it is the primary execution environment.
-
----
 
 ## Local-first execution model
 
@@ -31,8 +27,6 @@ Key properties:
 
 Remote services may enhance behavior, but must never be required for core functionality.
 
----
-
 ## State ownership
 
 The runtime owns application state.
@@ -44,8 +38,6 @@ Responsibilities:
 - Apply state transitions deterministically
 
 The runtime never delegates authoritative state ownership to the network or the cloud.
-
----
 
 ## Interaction with the sync engine
 
@@ -61,8 +53,6 @@ The sync engine is responsible for delivery, retries, and convergence.
 
 This separation ensures clarity of responsibility.
 
----
-
 ## Deterministic behavior
 
 Runtime behavior must be deterministic.
@@ -74,8 +64,6 @@ Requirements:
 - Non-deterministic behavior is isolated
 
 Determinism is required for replay, recovery, and conflict resolution.
-
----
 
 ## Performance characteristics
 
@@ -89,8 +77,6 @@ The runtime must:
 
 Latency introduced by synchronization must never affect local responsiveness.
 
----
-
 ## Vix.cpp as a reference runtime
 
 Vix.cpp serves as a reference implementation of a Softadastra runtime.
@@ -103,8 +89,6 @@ It provides:
 
 Other runtimes may exist, but they must conform to the same architectural principles.
 
----
-
 ## Language and stack independence
 
 Softadastra does not mandate a single programming language.
@@ -116,8 +100,6 @@ Requirements for any runtime implementation:
 - explicit sync boundaries
 
 This allows multiple stacks (C++, PHP, others) to coexist within the ecosystem.
-
----
 
 ## Summary
 
