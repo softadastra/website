@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
 
             <p class="subtitle reveal">
               Ivi.php is a lightweight, production-ready framework designed for
-              clean APIs and modular systems — without the bloat. A pragmatic
+              clean APIs and modular systems without the bloat. A pragmatic
               foundation that stays readable as your codebase grows.
             </p>
 
@@ -158,7 +158,7 @@ onBeforeUnmount(() => {
           <h2>Why developers choose Ivi.php</h2>
           <p>
             A framework that keeps the surface area small while still letting
-            you build real systems — APIs, dashboards, and modular backends.
+            you build real systems APIs, dashboards, and modular backends.
           </p>
         </div>
 
@@ -202,7 +202,7 @@ onBeforeUnmount(() => {
             </div>
             <p>
               Practical defaults for performance, error handling, and
-              maintainable architecture — without turning everything into magic.
+              maintainable architecture without turning everything into magic.
             </p>
             <div class="tags">
               <span class="tag">Fast startup</span>
@@ -220,7 +220,7 @@ onBeforeUnmount(() => {
         <div class="sectionHead reveal">
           <h2>Ecosystem</h2>
           <p>
-            A growing toolkit that feels consistent — so you can move faster
+            A growing toolkit that feels consistent so you can move faster
             without losing clarity.
           </p>
         </div>

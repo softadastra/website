@@ -142,3 +142,39 @@ html[data-theme="dark"] .sa-btn.ghost {
 main {
   padding-top: var(--topbar-h);
 }
+
+.rix-hero {
+  margin-bottom: 3rem;
+}
+
+.rix-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.rix-hero-image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.rix-hero-text h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 0.6rem;
+}
+
+.rix-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 34rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .rix-hero-inner {
+    grid-template-columns: 1fr;
+  }
+}

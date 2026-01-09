@@ -172,7 +172,6 @@ onBeforeUnmount(() => {
       </Container>
     </div>
 
-    <!-- WHY developers use Vix (Modular-style 3 columns) -->
     <div class="section">
       <Container>
         <div class="sectionHead" data-reveal>
@@ -238,8 +237,8 @@ onBeforeUnmount(() => {
             <h2 class="h2">A runtime, not “just a framework”.</h2>
             <p class="lead">
               Vix is a foundation for serious distributed systems: HTTP,
-              WebSocket, P2P, offline-first primitives — engineered as a
-              coherent runtime.
+              WebSocket, P2P, offline-first primitives engineered as a coherent
+              runtime.
             </p>
 
             <div class="bullets">
