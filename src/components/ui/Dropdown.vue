@@ -1,12 +1,14 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
-import { RouterLink } from "vue-router";
+import { ref, onMounted, onBeforeUnmount, computed, watch } from "vue";
+import { RouterLink, useRoute } from "vue-router";
 
 const props = defineProps({
   label: { type: String, required: true },
   items: { type: Array, default: () => [] },
   active: { type: Boolean, default: false },
 });
+
+const route = useRoute();
 
 const open = ref(false);
 const rootEl = ref(null);
@@ -23,30 +25,54 @@ function onDocClick(e) {
   if (!rootEl.value.contains(e.target)) close();
 }
 
+function normalize(path) {
+  if (!path) return "/";
+  return path.length > 1 ? path.replace(/\/+$/, "") : path;
+}
+
+const currentPath = computed(() => normalize(route.path));
+
+function isActive(href) {
+  const a = normalize(href);
+  const p = currentPath.value;
+  return p === a || (a !== "/" && p.startsWith(a + "/"));
+}
+
+function itemActive(it) {
+  return isActive(it?.href);
+}
+
+// ✅ ferme le dropdown quand la route change
+watch(
+  () => route.fullPath,
+  () => close()
+);
+
 onMounted(() => document.addEventListener("click", onDocClick));
 onBeforeUnmount(() => document.removeEventListener("click", onDocClick));
 </script>
 
 <template>
-  <div ref="rootEl">
+  <div ref="rootEl" class="dd">
     <button
       type="button"
       @click="toggle"
-      :aria-expanded="open"
+      :aria-expanded="open ? 'true' : 'false'"
       :class="{ active }"
     >
       <span>{{ label }}</span>
-      <span aria-hidden="true">▾</span>
+      <span class="chev" aria-hidden="true">▾</span>
     </button>
 
-    <div v-if="open" role="menu">
+    <div v-if="open" class="menu" role="menu" aria-label="Menu">
       <RouterLink
         v-for="(it, idx) in items"
         :key="idx"
         :to="it.href"
         role="menuitem"
-        @click="close"
         class="menuItem"
+        :class="{ active: itemActive(it) }"
+        @click="close"
       >
         <div class="miTop">{{ it.label }}</div>
         <div v-if="it.description" class="miDesc">{{ it.description }}</div>
@@ -56,7 +82,7 @@ onBeforeUnmount(() => document.removeEventListener("click", onDocClick));
 </template>
 
 <style scoped>
-div {
+.dd {
   position: relative;
 }
 
@@ -72,6 +98,12 @@ button {
   background: transparent;
   color: var(--nav-muted);
   cursor: pointer;
+}
+
+.chev {
+  opacity: 0.75;
+  font-size: 12px;
+  transform: translateY(1px);
 }
 
 button:hover {
@@ -101,18 +133,17 @@ button:hover::after {
 button.active {
   color: var(--nav-text);
 }
-
 button.active::after {
   background: var(--sa-orange);
   transform: scaleX(1);
 }
 
 /* menu follows theme via tokens */
-[role="menu"] {
+.menu {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  min-width: 220px;
+  min-width: 240px;
   padding: 8px;
   border-radius: 12px;
 
@@ -123,27 +154,33 @@ button.active::after {
   z-index: 1001;
 }
 
-a[role="menuitem"] {
-  display: flex;
-  padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: var(--menu-item);
-}
-
-a[role="menuitem"]:hover {
-  color: var(--menu-item-hover);
-  background: var(--menu-item-hover-bg);
-}
 .menuItem {
   display: grid;
   gap: 2px;
   padding: 10px;
   border-radius: 10px;
+  text-decoration: none;
+
+  color: var(--menu-item);
+  border: 1px solid transparent;
+}
+
+.menuItem:hover {
+  color: var(--menu-item-hover);
+  background: var(--menu-item-hover-bg);
+}
+
+/* ✅ active item (works for our class + router default classes) */
+.menuItem.active,
+.menuItem.router-link-active,
+.menuItem.router-link-exact-active {
+  color: var(--menu-item-hover);
+  background: var(--menu-item-hover-bg);
+  border-color: var(--menu-border);
 }
 
 .miTop {
-  font-weight: 600;
+  font-weight: 700;
 }
 .miDesc {
   font-size: 12px;

@@ -3,6 +3,7 @@ import { ROUTES } from "./routes.js";
 
 import Home from "../pages/Home.vue";
 import Docs from "../pages/Docs.vue";
+import { SITE } from "./config.js";
 
 /* Website: Products */
 import Products from "../pages/products/Products.vue";
@@ -52,52 +53,161 @@ import CommunityCommunication from "../pages/docs/community/Communication.vue";
 import CommunityEvents from "../pages/docs/community/Events.vue";
 
 const routes = [
-  { path: ROUTES.home, component: Home },
+  { path: ROUTES.home, component: Home, meta: { title: "Home" } },
 
-  /* Website */
-  { path: ROUTES.docs, component: Docs },
+  { path: ROUTES.products, component: Products, meta: { title: "Products" } },
+  {
+    path: ROUTES.productVix,
+    component: ProductVix,
+    meta: { title: "Vix.cpp Runtime" },
+  },
+  {
+    path: ROUTES.productIvi,
+    component: ProductIvi,
+    meta: { title: "Ivi.php Framework" },
+  },
+  { path: ROUTES.productRix, component: ProductRix, meta: { title: "Rix" } },
+  {
+    path: ROUTES.productCnerium,
+    component: ProductCnerium,
+    meta: { title: "Cnerium" },
+  },
 
-  { path: ROUTES.products, component: Products },
-  { path: ROUTES.productVix, component: ProductVix },
-  { path: ROUTES.productIvi, component: ProductIvi },
-  { path: ROUTES.productRix, component: ProductRix },
-  { path: ROUTES.productCnerium, component: ProductCnerium },
+  {
+    path: ROUTES.customers,
+    component: Customers,
+    meta: { title: "Customers" },
+  },
 
-  { path: ROUTES.customers, component: Customers },
+  { path: ROUTES.company, component: Company, meta: { title: "Company" } },
+  {
+    path: ROUTES.companyAbout,
+    component: CompanyAbout,
+    meta: { title: "About" },
+  },
+  {
+    path: ROUTES.companyCareers,
+    component: CompanyCareers,
+    meta: { title: "Careers" },
+  },
+  {
+    path: ROUTES.companyCulture,
+    component: CompanyCulture,
+    meta: { title: "Culture" },
+  },
+  {
+    path: ROUTES.companyContact,
+    component: CompanyContact,
+    meta: { title: "Contact" },
+  },
 
-  { path: ROUTES.company, component: Company },
-  { path: ROUTES.companyAbout, component: CompanyAbout },
-  { path: ROUTES.companyCareers, component: CompanyCareers },
-  { path: ROUTES.companyCulture, component: CompanyCulture },
-  { path: ROUTES.companyContact, component: CompanyContact },
+  { path: ROUTES.docs, component: Docs, meta: { title: "Docs" } },
 
-  /* Docs */
-  { path: ROUTES.foundation, component: Foundation },
-  { path: ROUTES.foundationWhat, component: FoundationWhat },
-  { path: ROUTES.foundationPrinciples, component: FoundationPrinciples },
-  { path: ROUTES.foundationNonGoals, component: FoundationNonGoals },
-  { path: ROUTES.foundationVision, component: FoundationVision },
+  {
+    path: ROUTES.foundation,
+    component: Foundation,
+    meta: { title: "Foundation" },
+  },
+  {
+    path: ROUTES.foundationWhat,
+    component: FoundationWhat,
+    meta: { title: "What is Softadastra" },
+  },
+  {
+    path: ROUTES.foundationPrinciples,
+    component: FoundationPrinciples,
+    meta: { title: "Principles" },
+  },
+  {
+    path: ROUTES.foundationNonGoals,
+    component: FoundationNonGoals,
+    meta: { title: "Non-goals" },
+  },
+  {
+    path: ROUTES.foundationVision,
+    component: FoundationVision,
+    meta: { title: "Vision" },
+  },
 
-  { path: ROUTES.architecture, component: Architecture },
-  { path: ROUTES.architectureOverview, component: ArchitectureOverview },
-  { path: ROUTES.architectureSync, component: ArchitectureSync },
-  { path: ROUTES.architectureNetwork, component: ArchitectureNetwork },
-  { path: ROUTES.architectureEdge, component: ArchitectureEdge },
-  { path: ROUTES.architectureRuntime, component: ArchitectureRuntime },
+  {
+    path: ROUTES.architecture,
+    component: Architecture,
+    meta: { title: "Architecture" },
+  },
+  {
+    path: ROUTES.architectureOverview,
+    component: ArchitectureOverview,
+    meta: { title: "Overview" },
+  },
+  {
+    path: ROUTES.architectureSync,
+    component: ArchitectureSync,
+    meta: { title: "Sync Engine" },
+  },
+  {
+    path: ROUTES.architectureNetwork,
+    component: ArchitectureNetwork,
+    meta: { title: "Network (P2P)" },
+  },
+  {
+    path: ROUTES.architectureEdge,
+    component: ArchitectureEdge,
+    meta: { title: "Edge Nodes" },
+  },
+  {
+    path: ROUTES.architectureRuntime,
+    component: ArchitectureRuntime,
+    meta: { title: "Runtime" },
+  },
 
-  { path: ROUTES.ecosystem, component: Ecosystem },
-  { path: ROUTES.ecosystemStacks, component: EcosystemStacks },
-  { path: ROUTES.ecosystemProducts, component: EcosystemProducts },
+  {
+    path: ROUTES.ecosystem,
+    component: Ecosystem,
+    meta: { title: "Ecosystem" },
+  },
+  {
+    path: ROUTES.ecosystemStacks,
+    component: EcosystemStacks,
+    meta: { title: "Stacks" },
+  },
+  {
+    path: ROUTES.ecosystemProducts,
+    component: EcosystemProducts,
+    meta: { title: "Products" },
+  },
 
-  { path: ROUTES.governance, component: Governance },
-  { path: ROUTES.governanceRoadmap, component: GovernanceRoadmap },
-  { path: ROUTES.governanceContribution, component: GovernanceContribution },
+  {
+    path: ROUTES.governance,
+    component: Governance,
+    meta: { title: "Governance" },
+  },
+  {
+    path: ROUTES.governanceRoadmap,
+    component: GovernanceRoadmap,
+    meta: { title: "Roadmap" },
+  },
+  {
+    path: ROUTES.governanceContribution,
+    component: GovernanceContribution,
+    meta: { title: "Contribution" },
+  },
 
-  { path: ROUTES.community, component: Community },
-  { path: ROUTES.communityCommunication, component: CommunityCommunication },
-  { path: ROUTES.communityEvents, component: CommunityEvents },
+  {
+    path: ROUTES.community,
+    component: Community,
+    meta: { title: "Community" },
+  },
+  {
+    path: ROUTES.communityCommunication,
+    component: CommunityCommunication,
+    meta: { title: "Communication" },
+  },
+  {
+    path: ROUTES.communityEvents,
+    component: CommunityEvents,
+    meta: { title: "Events" },
+  },
 
-  /* fallback */
   { path: "/:pathMatch(.*)*", redirect: ROUTES.home },
 ];
 
@@ -107,4 +217,26 @@ export const router = createRouter({
   scrollBehavior() {
     return { top: 0 };
   },
+});
+
+function setMetaTag(name, content) {
+  if (!content) return;
+
+  let tag = document.querySelector(`meta[name="${name}"]`);
+  if (!tag) {
+    tag = document.createElement("meta");
+    tag.setAttribute("name", name);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute("content", content);
+}
+
+router.afterEach((to) => {
+  const pageTitle = to.meta?.title
+    ? `${to.meta.title} · ${SITE.name}`
+    : SITE.name;
+  document.title = pageTitle;
+
+  const desc = to.meta?.description || SITE.description;
+  setMetaTag("description", desc);
 });
