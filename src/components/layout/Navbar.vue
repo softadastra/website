@@ -1,38 +1,12 @@
 <script setup>
-import { computed, ref, onMounted } from "vue";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import Icon from "../icons/Icons.vue";
 import NavLinkGroup from "./NavLinkGroup.vue";
 import { SITE, NAV, LINKS } from "../../app/config.js";
+import ThemeToggle from "../ui/ThemeToggle.vue";
 
 const mobileOpen = ref(false);
-
-function getInitialTheme() {
-  const saved = localStorage.getItem("sa_theme");
-  if (saved === "light" || saved === "dark") return saved;
-  const prefersDark = window.matchMedia?.(
-    "(prefers-color-scheme: dark)"
-  )?.matches;
-  return prefersDark ? "dark" : "light";
-}
-
-const theme = ref("dark");
-
-function applyTheme(t) {
-  theme.value = t;
-  document.documentElement.setAttribute("data-theme", t);
-  localStorage.setItem("sa_theme", t);
-}
-
-function toggleTheme() {
-  applyTheme(theme.value === "dark" ? "light" : "dark");
-}
-
-onMounted(() => {
-  applyTheme(getInitialTheme());
-});
-
-const themeIcon = computed(() => (theme.value === "dark" ? "moon" : "sun"));
 </script>
 
 <template>
@@ -44,6 +18,13 @@ const themeIcon = computed(() => (theme.value === "dark" ? "moon" : "sun"));
           <img class="logo" :src="SITE.logoUrl" :alt="SITE.name" />
           <span class="name">{{ SITE.name }}</span>
         </RouterLink>
+
+        <!-- Search pill (UI only) -->
+        <button class="search" type="button" aria-label="Search">
+          <span class="searchIcon">⌕</span>
+          <span class="searchText">Search</span>
+          <span class="kbd">Ctrl K</span>
+        </button>
       </div>
 
       <!-- Center -->
@@ -53,14 +34,7 @@ const themeIcon = computed(() => (theme.value === "dark" ? "moon" : "sun"));
 
       <!-- Right -->
       <div class="right">
-        <button
-          class="iconBtn"
-          type="button"
-          @click="toggleTheme"
-          aria-label="Toggle theme"
-        >
-          <Icon :name="themeIcon" />
-        </button>
+        <ThemeToggle class="iconBtnLike" />
 
         <a
           class="iconBtn"
@@ -341,5 +315,16 @@ const themeIcon = computed(() => (theme.value === "dark" ? "moon" : "sun"));
 .drawerItem:hover {
   color: rgba(255, 255, 255, 0.92);
   background: rgba(255, 255, 255, 0.06);
+}
+.iconBtnLike :deep(.toggle) {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid var(--nav-border);
+  background: var(--nav-pill);
+  color: var(--nav-text);
+}
+.iconBtnLike :deep(.toggle:hover) {
+  background: var(--nav-pill-hover);
 }
 </style>
