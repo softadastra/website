@@ -1,24 +1,19 @@
 <script setup>
 import Dropdown from "../ui/Dropdown.vue";
+import { RouterLink } from "vue-router";
 
-const props = defineProps({
-  group: {
-    type: Object,
-    required: true,
-  },
+defineProps({
+  group: { type: Object, required: true },
 });
 </script>
 
 <template>
-  <!-- Si le groupe a des items => dropdown -->
   <Dropdown
     v-if="Array.isArray(group.items) && group.items.length > 0"
     :label="group.label"
     :items="group.items"
   />
-
-  <!-- Sinon => lien direct -->
-  <a v-else :href="group.href || '#'">
+  <RouterLink v-else :to="group.href">
     {{ group.label }}
-  </a>
+  </RouterLink>
 </template>

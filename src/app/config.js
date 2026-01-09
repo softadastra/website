@@ -1,3 +1,5 @@
+import { ROUTES } from "./routes.js";
+
 export const SITE = {
   name: "Softadastra",
   tagline: "Offline-first · Local-first · Resilient Web Runtime",
@@ -16,47 +18,47 @@ export const LINKS = {
 export const NAV = [
   {
     label: "Foundation",
-    href: "#",
+    href: ROUTES.foundation,
     items: [
-      { label: "What is Softadastra", href: "#" },
-      { label: "Principles", href: "#" },
-      { label: "Non-goals", href: "#" },
-      { label: "Vision", href: "#" },
+      { label: "What is Softadastra", href: ROUTES.foundationWhat },
+      { label: "Principles", href: ROUTES.foundationPrinciples },
+      { label: "Non-goals", href: ROUTES.foundationNonGoals },
+      { label: "Vision", href: ROUTES.foundationVision },
     ],
   },
   {
     label: "Architecture",
-    href: "#",
+    href: ROUTES.architecture,
     items: [
-      { label: "Overview", href: "#" },
-      { label: "Sync Engine", href: "#" },
-      { label: "Network (P2P)", href: "#" },
-      { label: "Edge Nodes", href: "#" },
-      { label: "Runtime", href: "#" },
+      { label: "Overview", href: ROUTES.architectureOverview },
+      { label: "Sync Engine", href: ROUTES.architectureSync },
+      { label: "Network (P2P)", href: ROUTES.architectureNetwork },
+      { label: "Edge Nodes", href: ROUTES.architectureEdge },
+      { label: "Runtime", href: ROUTES.architectureRuntime },
     ],
   },
   {
     label: "Ecosystem",
-    href: "#",
+    href: ROUTES.ecosystem,
     items: [
-      { label: "Stacks", href: "#" },
-      { label: "Products", href: "#" },
+      { label: "Stacks", href: ROUTES.ecosystemStacks },
+      { label: "Products", href: ROUTES.ecosystemProducts },
     ],
   },
   {
     label: "Governance",
-    href: "#",
+    href: ROUTES.governance,
     items: [
-      { label: "Roadmap", href: "#" },
-      { label: "Contribution", href: "#" },
+      { label: "Roadmap", href: ROUTES.governanceRoadmap },
+      { label: "Contribution", href: ROUTES.governanceContribution },
     ],
   },
   {
     label: "Community",
-    href: "#",
+    href: ROUTES.community,
     items: [
-      { label: "Communication", href: "#" },
-      { label: "Events", href: "#" },
+      { label: "Communication", href: ROUTES.communityCommunication },
+      { label: "Events", href: ROUTES.communityEvents },
     ],
   },
 ];
