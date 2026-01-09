@@ -1,12 +1,15 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { RouterLink } from "vue-router";
+
 import Icon from "../icons/Icons.vue";
 import NavLinkGroup from "./NavLinkGroup.vue";
 import { SITE, NAV, LINKS } from "../../app/config.js";
 import ThemeToggle from "../ui/ThemeToggle.vue";
 
-const mobileOpen = ref(false);
+defineProps({
+  onOpenSearch: { type: Function, required: true },
+});
 </script>
 
 <template>
@@ -20,7 +23,12 @@ const mobileOpen = ref(false);
         </RouterLink>
 
         <!-- Search pill (UI only) -->
-        <button class="search" type="button" aria-label="Search">
+        <button
+          class="search"
+          type="button"
+          aria-label="Search"
+          @click="onOpenSearch"
+        >
           <span class="searchIcon">⌕</span>
           <span class="searchText">Search</span>
           <span class="kbd">Ctrl K</span>
@@ -326,5 +334,39 @@ const mobileOpen = ref(false);
 }
 .iconBtnLike :deep(.toggle:hover) {
   background: var(--nav-pill-hover);
+}
+.search {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 12px;
+
+  border: 1px solid var(--nav-border);
+  background: var(--nav-pill);
+  color: var(--nav-muted);
+  cursor: pointer;
+}
+
+.search:hover {
+  background: var(--nav-pill-hover);
+  color: var(--nav-text);
+}
+
+.searchIcon {
+  opacity: 0.8;
+}
+
+.searchText {
+  font-size: 13px;
+}
+
+.kbd {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--nav-border);
+  color: var(--nav-muted);
 }
 </style>
