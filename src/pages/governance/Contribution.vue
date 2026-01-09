@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/governance/contribution.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Contribution</h1>
-    <p>How to contribute to the Softadastra foundation.</p>
-  </section>
+  <MarkdownDocPage title="Contribution" :source="md" />
 </template>

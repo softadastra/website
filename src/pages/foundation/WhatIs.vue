@@ -1,12 +1,8 @@
 <script setup>
-import DocPage from "../../components/layout/DocPage.vue";
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/FOUNDATION.md?raw";
 </script>
 
 <template>
-  <DocPage
-    title="What is Softadastra"
-    description="A foundational runtime built to make the web reliable under real-world failure."
-  >
-    <p>Content coming next.</p>
-  </DocPage>
+  <MarkdownDocPage title="What is Softadastra" :source="md" />
 </template>

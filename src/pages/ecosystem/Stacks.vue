@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/ecosystem/stacks.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Stacks</h1>
-    <p>Reference technology stacks implementing Softadastra primitives.</p>
-  </section>
+  <MarkdownDocPage title="Stacks" :source="md" />
 </template>

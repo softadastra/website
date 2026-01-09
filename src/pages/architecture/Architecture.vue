@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/architecture/overview.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Architecture</h1>
-    <p>Architecture landing page.</p>
-  </section>
+  <MarkdownDocPage title="Architecture" :source="md" />
 </template>

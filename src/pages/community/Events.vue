@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/community/events.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Events</h1>
-    <p>Talks, meetups, and technical events related to Softadastra.</p>
-  </section>
+  <MarkdownDocPage title="Events" :source="md" />
 </template>

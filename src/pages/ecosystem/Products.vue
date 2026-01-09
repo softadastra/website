@@ -1,8 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/ecosystem/products.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Products</h1>
-    <p>
-      Products validating the Softadastra architecture under real constraints.
-    </p>
-  </section>
+  <MarkdownDocPage title="Products" :source="md" />
 </template>

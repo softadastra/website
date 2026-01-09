@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/architecture/runtime.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Runtime</h1>
-    <p>Local execution environment and application runtime model.</p>
-  </section>
+  <MarkdownDocPage title="Runtime" :source="md" />
 </template>

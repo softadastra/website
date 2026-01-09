@@ -1,9 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/FOUNDATION.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Foundation</h1>
-    <p>
-      Softadastra is a foundational web runtime: offline-first, local-first, and
-      resilient by construction.
-    </p>
-  </section>
+  <MarkdownDocPage title="Foundation" :source="md" />
 </template>

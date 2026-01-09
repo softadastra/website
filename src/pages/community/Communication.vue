@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/community/communication.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Communication</h1>
-    <p>How the Softadastra community communicates and collaborates.</p>
-  </section>
+  <MarkdownDocPage title="Communication" :source="md" />
 </template>

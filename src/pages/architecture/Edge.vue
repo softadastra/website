@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/architecture/edge.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Edge Nodes</h1>
-    <p>Store-and-forward, caching, and resilience at the network edge.</p>
-  </section>
+  <MarkdownDocPage title="Edge Nodes" :source="md" />
 </template>

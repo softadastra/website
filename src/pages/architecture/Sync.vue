@@ -1,12 +1,8 @@
 <script setup>
-import DocPage from "../../components/layout/DocPage.vue";
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/architecture/sync.md?raw";
 </script>
 
 <template>
-  <DocPage
-    title="Sync Engine"
-    description="Durable synchronization layer: WAL, outbox, retries, conflict handling."
-  >
-    <p>Content coming next.</p>
-  </DocPage>
+  <MarkdownDocPage title="Sync Engine" :source="md" />
 </template>

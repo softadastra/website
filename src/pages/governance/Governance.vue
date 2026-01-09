@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/governance/overview.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Governance</h1>
-    <p>Long-term stewardship, roadmap, and contribution process.</p>
-  </section>
+  <MarkdownDocPage title="Governance" :source="md" />
 </template>

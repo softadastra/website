@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/ecosystem/overview.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Ecosystem</h1>
-    <p>Products and stacks built on top of the Softadastra foundation.</p>
-  </section>
+  <MarkdownDocPage title="Ecosystem" :source="md" />
 </template>

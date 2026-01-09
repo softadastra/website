@@ -1,6 +1,8 @@
+<script setup>
+import MarkdownDocPage from "../../components/layout/MarkdownDocPage.vue";
+import md from "../../content/governance/roadmap.md?raw";
+</script>
+
 <template>
-  <section>
-    <h1>Roadmap</h1>
-    <p>Planned evolution of the Softadastra foundation.</p>
-  </section>
+  <MarkdownDocPage title="Roadmap" :source="md" />
 </template>
