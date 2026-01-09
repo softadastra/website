@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://softadastra.com/</loc></url>
+
+  <url><loc>https://softadastra.com/products</loc></url>
+  <url><loc>https://softadastra.com/vix</loc></url>
+  <url><loc>https://softadastra.com/ivi</loc></url>
+  <url><loc>https://softadastra.com/rix</loc></url>
+  <url><loc>https://softadastra.com/cnerium</loc></url>
+
+  <url><loc>https://softadastra.com/customers</loc></url>
+
+  <url><loc>https://softadastra.com/company</loc></url>
+  <url><loc>https://softadastra.com/company/about</loc></url>
+  <url><loc>https://softadastra.com/company/careers</loc></url>
+  <url><loc>https://softadastra.com/company/culture</loc></url>
+  <url><loc>https://softadastra.com/company/contact</loc></url>
+
+  <url><loc>https://softadastra.com/docs</loc></url>
+
+  <url><loc>https://softadastra.com/docs/foundation</loc></url>
+  <url><loc>https://softadastra.com/docs/foundation/what-is</loc></url>
+  <url><loc>https://softadastra.com/docs/foundation/principles</loc></url>
+  <url><loc>https://softadastra.com/docs/foundation/non-goals</loc></url>
+  <url><loc>https://softadastra.com/docs/foundation/vision</loc></url>
+
+  <url><loc>https://softadastra.com/docs/architecture</loc></url>
+  <url><loc>https://softadastra.com/docs/architecture/overview</loc></url>
+  <url><loc>https://softadastra.com/docs/architecture/sync</loc></url>
+  <url><loc>https://softadastra.com/docs/architecture/network</loc></url>
+  <url><loc>https://softadastra.com/docs/architecture/edge</loc></url>
+  <url><loc>https://softadastra.com/docs/architecture/runtime</loc></url>
+
+  <url><loc>https://softadastra.com/docs/ecosystem</loc></url>
+  <url><loc>https://softadastra.com/docs/ecosystem/stacks</loc></url>
+  <url><loc>https://softadastra.com/docs/ecosystem/products</loc></url>
+
+  <url><loc>https://softadastra.com/docs/governance</loc></url>
+  <url><loc>https://softadastra.com/docs/governance/roadmap</loc></url>
+  <url><loc>https://softadastra.com/docs/governance/contribution</loc></url>
+
+  <url><loc>https://softadastra.com/docs/community</loc></url>
+  <url><loc>https://softadastra.com/docs/community/communication</loc></url>
+  <url><loc>https://softadastra.com/docs/community/events</loc></url>
+</urlset>

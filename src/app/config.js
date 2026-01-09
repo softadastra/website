@@ -23,6 +23,13 @@ export const LINKS = {
     "mailto:softadastra@gmail.com?subject=Vix.cpp%20-%20Talk%20to%20engineers",
 };
 
+export const SEO = {
+  siteUrl: "https://softadastra.com",
+  ogImage:
+    "https://res.cloudinary.com/dwjbed2xb/image/upload/v1762624310/logo-softadastra_ksv72b.png",
+  twitter: "@softadastra",
+};
+
 /* Top navbar (website) */
 export const NAV = [
   {
