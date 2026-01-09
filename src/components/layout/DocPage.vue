@@ -8,16 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <DocsLayout>
-    <section>
-      <header>
-        <h1>{{ title }}</h1>
-        <p v-if="description">{{ description }}</p>
-      </header>
-
-      <main>
-        <slot />
-      </main>
-    </section>
+  <DocsLayout :title="title" :description="description">
+    <slot />
   </DocsLayout>
 </template>

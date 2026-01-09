@@ -1047,4 +1047,189 @@ onBeforeUnmount(() => {
   padding: 1.35rem 1.4rem;
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.55);
 }
+
+@media (max-width: 980px) {
+  .hero {
+    padding: 2.4rem 0 1.9rem;
+  }
+
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+    align-items: stretch;
+  }
+
+  .heroText {
+    order: 1;
+    min-width: 0;
+  }
+
+  .heroCard {
+    order: 2;
+    min-width: 0;
+  }
+
+  .kicker {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.45rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .h1 {
+    margin-top: 0.85rem;
+    font-size: clamp(1.75rem, 6.6vw, 2.35rem);
+    line-height: 1.1;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .sub {
+    max-width: 100%;
+    font-size: 0.98rem;
+  }
+
+  .cta {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .meta {
+    width: 100%;
+    gap: 0.45rem;
+  }
+
+  .pill {
+    white-space: normal;
+  }
+
+  .micro {
+    width: 100%;
+    padding: 0.85rem 0.95rem;
+  }
+
+  .term,
+  .cardFoot {
+    width: 100%;
+  }
+
+  /* IMPORTANT: éviter que le terminal “force” le layout */
+  .termBody {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .termBody pre {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 2.1rem 0 1.6rem;
+  }
+
+  /* on évite le kicker trop long */
+  .kicker .sep,
+  .kicker .muted {
+    display: none;
+  }
+
+  .h1 {
+    font-size: clamp(1.6rem, 7.4vw, 2.05rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 2.2rem 0 1.7rem;
+  }
+
+  .kicker .sep,
+  .kicker .muted {
+    display: none;
+  }
+
+  .h1 {
+    font-size: clamp(1.65rem, 7.2vw, 2.15rem);
+  }
+
+  .sub {
+    font-size: 0.95rem;
+  }
+
+  .termHead,
+  .codeHead {
+    padding: 0.52rem 0.65rem;
+  }
+
+  .termTitle,
+  .codeTitle {
+    font-size: 0.74rem;
+  }
+
+  .termBody {
+    font-size: 0.78rem;
+  }
+
+  .codeBody pre {
+    font-size: 0.84rem;
+  }
+
+  .miniSep {
+    margin: 0 0.3rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+
+  .cardMeta {
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.76rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .b {
+    gap: 0.65rem;
+  }
+
+  .bDot {
+    margin-top: 6px;
+  }
+
+  .finalInner .cta {
+    gap: 0.6rem;
+  }
+}
+
+/* Small-device overflow safety (very important for terminals) */
+@media (max-width: 980px) {
+  .termBody,
+  .codeBody {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-gutter: stable both-edges;
+  }
+
+  .termBody pre,
+  .codeBody pre {
+    display: inline-block;
+    min-width: max-content;
+  }
+}
 </style>

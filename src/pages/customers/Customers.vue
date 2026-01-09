@@ -2,12 +2,6 @@
 import SitePage from "../../components/layout/SitePage.vue";
 import { onMounted, onBeforeUnmount, ref, computed, nextTick } from "vue";
 import { LINKS } from "../../app/config.js";
-import amdLogo from "../../assets/amd.png";
-import awsLogo from "../../assets/aws.png";
-import nvidiaLogo from "../../assets/nvidia.png";
-import inworldLogo from "../../assets/inworld.jpg";
-import sfcomputeLogo from "../../assets/sfcompute.webp";
-import qwerkyLogo from "../../assets/qwerky.jpg";
 
 let io = null;
 
@@ -62,7 +56,7 @@ const cards = [
     type: "Customers",
     company: "Inworld",
     service: "Real-time audio synthesis & inference",
-    logo: inworldLogo,
+    logo: "/images/inworld.jpg",
     title: "~70% faster response time for streaming workloads",
     desc: "Lower latency for chunked synthesis, higher QPS, and predictable scaling under real production traffic.",
     href: "#",
@@ -72,7 +66,7 @@ const cards = [
     type: "Customers",
     company: "San Francisco Compute",
     service: "GPU inference infrastructure & hosting",
-    logo: sfcomputeLogo,
+    logo: "/images/sfcompute.webp",
     title: "Slashed inference costs by 80%",
     desc: "Better utilization, fewer nodes, and a simpler path from prototype to stable production deployments.",
     href: "#",
@@ -82,7 +76,7 @@ const cards = [
     type: "Partners",
     company: "Qwerky AI",
     service: "Cross-architecture deployment & portability",
-    logo: qwerkyLogo,
+    logo: "/images/qwerky.jpg",
     title: "Deploy across architectures without rewrites",
     desc: "A consistent runtime surface to ship on cloud, on-prem, and edge with controlled performance.",
     href: "#",
@@ -92,7 +86,7 @@ const cards = [
     type: "Partners",
     company: "AWS",
     service: "Cloud & edge runtime environments",
-    logo: awsLogo,
+    logo: "/images/aws.png",
     title: "Portable runtime foundations across environments",
     desc: "A portability-first approach that keeps behavior predictable while preserving escape hatches for optimization.",
     href: "#",
@@ -102,7 +96,7 @@ const cards = [
     type: "Partners",
     company: "NVIDIA",
     service: "GPU acceleration & systems performance",
-    logo: nvidiaLogo,
+    logo: "/images/nvidia.png",
     title: "Higher throughput with stable latency under load",
     desc: "Performance that holds under sustained concurrency—built for production, not only peak benchmarks.",
     href: "#",
@@ -112,7 +106,7 @@ const cards = [
     type: "Partners",
     company: "AMD",
     service: "Compute platforms & heterogeneous hardware",
-    logo: amdLogo,
+    logo: "/images/amd.png",
     title: "Cross-platform optimization, same runtime model",
     desc: "Ship once, run across heterogeneous stacks with deterministic behavior and measurable outcomes.",
     href: "#",
@@ -150,10 +144,7 @@ const mailtoDemo = computed(() => {
   return `mailto:${email}?subject=${subject}&body=${body}`;
 });
 
-const mailtoEngineers = computed(() => {
-  // Tu as déjà un mailto prêt dans config.js
-  return LINKS.engineersEmail;
-});
+const mailtoEngineers = computed(() => LINKS.engineersEmail);
 </script>
 
 <template>
@@ -163,7 +154,6 @@ const mailtoEngineers = computed(() => {
     description="Softadastra is early. If you’re building local-first or offline-first systems, we’d love to talk."
   >
     <main class="customersPage">
-      <!-- HERO -->
       <section class="hero">
         <div class="container heroGrid">
           <div class="heroLeft reveal">
@@ -213,10 +203,9 @@ const mailtoEngineers = computed(() => {
           </div>
         </div>
 
-        <div class="heroGlow" aria-hidden="true"></div>
+        <div class="heroGlow" aria-hidden="true" />
       </section>
 
-      <!-- CASE STUDIES -->
       <section id="case-studies" class="caseStudies">
         <div class="container">
           <div class="sectionHead reveal">
@@ -256,6 +245,8 @@ const mailtoEngineers = computed(() => {
                       class="caseLogo"
                       :src="c.logo"
                       :alt="c.company + ' logo'"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 
@@ -278,7 +269,6 @@ const mailtoEngineers = computed(() => {
         </div>
       </section>
 
-      <!-- ENTERPRISE -->
       <section class="enterprise">
         <div class="container">
           <div class="sectionHead reveal">

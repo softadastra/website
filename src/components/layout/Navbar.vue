@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onBeforeUnmount } from "vue";
+import { ref, watch, onBeforeUnmount, computed } from "vue";
 import { RouterLink } from "vue-router";
 
 import Icon from "../icons/Icons.vue";
@@ -12,6 +12,12 @@ defineProps({
 });
 
 const mobileOpen = ref(false);
+
+const isSvgLogo = computed(() =>
+  String(SITE.logoUrl || "")
+    .toLowerCase()
+    .endsWith(".svg")
+);
 
 function onKeydown(e) {
   if (!mobileOpen.value) return;
@@ -48,7 +54,12 @@ function openMobileSearch(onOpenSearch) {
       <!-- Left -->
       <div class="left">
         <RouterLink class="brand" to="/" aria-label="Home">
-          <img class="logo" :src="SITE.logoUrl" :alt="SITE.name" />
+          <img
+            class="logo"
+            :class="{ logoSvg: isSvgLogo }"
+            :src="SITE.logoUrl"
+            :alt="SITE.name"
+          />
           <span class="name">{{ SITE.name }}</span>
         </RouterLink>
       </div>
@@ -105,7 +116,12 @@ function openMobileSearch(onOpenSearch) {
         <div class="drawer" role="dialog" aria-modal="true" aria-label="Menu">
           <div class="drawerTop">
             <div class="drawerBrand">
-              <img class="drawerLogo" :src="SITE.logoUrl" :alt="SITE.name" />
+              <img
+                class="drawerLogo"
+                :class="{ logoSvg: isSvgLogo }"
+                :src="SITE.logoUrl"
+                :alt="SITE.name"
+              />
               <strong class="drawerName">{{ SITE.name }}</strong>
             </div>
 
@@ -724,5 +740,38 @@ html[data-theme="light"] .drawerGroup {
 .drawerSearch:focus-visible {
   outline: 2px solid rgba(213, 122, 42, 0.5);
   outline-offset: 2px;
+}
+html[data-theme="dark"] .logoSvg {
+  filter: invert(1) brightness(1.1);
+}
+
+html[data-theme="dark"] .drawerLogo.logoSvg {
+  filter: invert(1) brightness(1.1);
+}
+.iconBtn {
+  color: var(--nav-muted);
+}
+.iconBtn:hover {
+  color: var(--nav-text);
+}
+.iconBtn :deep(svg),
+.burger :deep(svg) {
+  width: 18px;
+  height: 18px;
+}
+
+.iconBtn :deep(svg *),
+.burger :deep(svg *) {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+html[data-theme="dark"] .iconBtn,
+html[data-theme="dark"] .burger {
+  color: rgba(255, 255, 255, 0.78);
+}
+html[data-theme="dark"] .iconBtn:hover,
+html[data-theme="dark"] .burger:hover {
+  color: rgba(255, 255, 255, 0.92);
 }
 </style>

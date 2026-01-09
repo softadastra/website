@@ -40,8 +40,6 @@ Applications built on Softadastra continue to function **offline**, accept **loc
 - a cloud-first SaaS platform
 - a degraded version of the web
 
-See explicit boundaries: [`foundation/non-goals.md`](foundation/non-goals.md)
-
 ## Architecture at a glance
 
 Softadastra is organized around a clear architectural center: **the sync engine**.
@@ -52,17 +50,6 @@ Four major layers work together:
 2. **Sync Engine** : WAL, outbox, retries, conflict handling
 3. **Network** : secure P2P transport, routing, relays
 4. **Edge** : caching and store-and-forward nodes
-
-<p align="center">
-  <img 
-    src="https://res.cloudinary.com/dwjbed2xb/image/upload/v1767929305/roadmap_lgiljy.png"
-    alt="Softadastra Architecture Overview"
-    width="90%"
-    style="max-width:1000px;border-radius:12px;"
-  />
-</p>
-
-Start here: [`architecture/overview.md`](architecture/overview.md)
 
 ## Ecosystem & stacks
 
@@ -75,8 +62,6 @@ Current reference stacks include:
 
 Other stacks may exist, as long as they respect the same primitives.
 
-See: [`ecosystem/stacks.md`](ecosystem/stacks.md)
-
 ## Products
 
 Products in the Softadastra ecosystem **prove** the foundation they do not define it.
@@ -87,23 +72,14 @@ Example:
 
 Products are intentionally constrained and replaceable.
 
-See: [`ecosystem/products.md`](ecosystem/products.md)
-
 ## Governance & roadmap
 
 Softadastra is a **long-term foundation effort**.
-
-- Roadmap: [`governance/roadmap.md`](governance/roadmap.md)
-- Contributions: [`governance/contribution.md`](governance/contribution.md)
-
 Architectural correctness comes before growth.
 
 ## Community
 
 Softadastra values depth, clarity, and technical rigor.
-
-- Communication: [`community/communication.md`](community/communication.md)
-- Events: [`community/events.md`](community/events.md)
 
 ## License
 

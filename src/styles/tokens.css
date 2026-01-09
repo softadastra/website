@@ -7,9 +7,35 @@
 
   /* Layout */
   --max: 1200px;
+
+  /* -------- Default = DARK -------- */
+  --bg: #0b1220;
+  --text: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.7);
+
+  --panel: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Navbar */
+  --nav-bg: rgba(11, 18, 32, 0.72);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --nav-text: rgba(255, 255, 255, 0.92);
+  --nav-muted: rgba(255, 255, 255, 0.72);
+  --nav-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+
+  --nav-pill: rgba(255, 255, 255, 0.05);
+  --nav-pill-hover: rgba(255, 255, 255, 0.09);
+
+  /* Dropdown menu */
+  --menu-bg: #0b1220;
+  --menu-border: rgba(255, 255, 255, 0.1);
+  --menu-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --menu-item: rgba(255, 255, 255, 0.8);
+  --menu-item-hover: rgba(255, 255, 255, 0.92);
+  --menu-item-hover-bg: rgba(255, 255, 255, 0.06);
 }
 
-/* -------- Light (default) -------- */
+/* -------- Light override -------- */
 html[data-theme="light"] {
   --bg: #ffffff;
   --text: #0f172a;
@@ -35,32 +61,4 @@ html[data-theme="light"] {
   --menu-item: rgba(15, 23, 42, 0.84);
   --menu-item-hover: rgba(15, 23, 42, 0.92);
   --menu-item-hover-bg: rgba(15, 23, 42, 0.05);
-}
-
-/* -------- Dark -------- */
-html[data-theme="dark"] {
-  --bg: #0b1220;
-  --text: rgba(255, 255, 255, 0.92);
-  --text-muted: rgba(255, 255, 255, 0.7);
-
-  --panel: rgba(255, 255, 255, 0.03);
-  --border: rgba(255, 255, 255, 0.1);
-
-  /* Navbar */
-  --nav-bg: rgba(11, 18, 32, 0.72);
-  --nav-border: rgba(255, 255, 255, 0.1);
-  --nav-text: rgba(255, 255, 255, 0.92);
-  --nav-muted: rgba(255, 255, 255, 0.72);
-  --nav-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
-
-  --nav-pill: rgba(255, 255, 255, 0.05);
-  --nav-pill-hover: rgba(255, 255, 255, 0.09);
-
-  /* Dropdown menu */
-  --menu-bg: #0b1220;
-  --menu-border: rgba(255, 255, 255, 0.1);
-  --menu-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-  --menu-item: rgba(255, 255, 255, 0.8);
-  --menu-item-hover: rgba(255, 255, 255, 0.92);
-  --menu-item-hover-bg: rgba(255, 255, 255, 0.06);
 }

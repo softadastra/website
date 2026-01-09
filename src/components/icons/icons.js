@@ -1,15 +1,15 @@
-import ChevronDownUrl from "./svg/chevron-down.svg?url";
-import MenuUrl from "./svg/menu.svg?url";
-import CloseUrl from "./svg/close.svg?url";
-import GithubUrl from "./svg/github.svg?url";
-import sun from "./svg/sun.svg";
-import moon from "./svg/moon.svg";
+import ChevronDownRaw from "./svg/chevron-down.svg?raw";
+import MenuRaw from "./svg/menu.svg?raw";
+import CloseRaw from "./svg/close.svg?raw";
+import GithubRaw from "./svg/github.svg?raw";
+import SunRaw from "./svg/sun.svg?raw";
+import MoonRaw from "./svg/moon.svg?raw";
 
 export const ICONS = {
-  chevron: ChevronDownUrl,
-  menu: MenuUrl,
-  close: CloseUrl,
-  github: GithubUrl,
-  sun,
-  moon,
+  chevron: ChevronDownRaw,
+  menu: MenuRaw,
+  close: CloseRaw,
+  github: GithubRaw,
+  sun: SunRaw,
+  moon: MoonRaw,
 };

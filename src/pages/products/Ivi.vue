@@ -3,14 +3,6 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 import Container from "../../components/ui/Container.vue";
 import { LINKS } from "../../app/config.js";
 
-/**
- * Ivi.php marketing page:
- * - No bootstrap/CDN classes
- * - Premium animations (reveal on scroll)
- * - Install command copy
- * - Strong "Simple. Modern. Expressive." positioning
- */
-
 const installCmd = "composer create-project iviphp/ivi myapp";
 const copied = ref(false);
 
@@ -20,14 +12,17 @@ async function copyInstall() {
     copied.value = true;
     window.setTimeout(() => (copied.value = false), 1200);
   } catch {
-    // fallback: do nothing (clipboard blocked)
     copied.value = false;
   }
 }
 
-// small reveal animation (IntersectionObserver)
+const THEME_ATTR = "data-theme";
+const DARK_VALUE = "dark";
+
 let io = null;
-onMounted(() => {
+let previousTheme = null;
+
+function mountRevealObserver() {
   io = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
@@ -38,9 +33,22 @@ onMounted(() => {
   );
 
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+}
+
+onMounted(() => {
+  previousTheme = document.documentElement.getAttribute(THEME_ATTR);
+  document.documentElement.setAttribute(THEME_ATTR, DARK_VALUE);
+
+  mountRevealObserver();
 });
 
 onBeforeUnmount(() => {
+  if (previousTheme === null) {
+    document.documentElement.removeAttribute(THEME_ATTR);
+  } else {
+    document.documentElement.setAttribute(THEME_ATTR, previousTheme);
+  }
+
   if (io) io.disconnect();
 });
 </script>
@@ -124,8 +132,10 @@ onBeforeUnmount(() => {
                 </div>
                 <div class="panelTitle">ivi.php — example</div>
               </div>
-
-              <pre><code><span class="c">  # routes.php</span>
+              <div class="panelBody">
+                <pre
+                  class="codeScroll"
+                ><code><span class="c">  # routes.php</span>
 
   <span class="k">$router</span><span class="t">-></span><span class="f">get</span><span class="t">(</span><span class="s">"/"</span><span class="t">,</span> <span class="t">[</span><span class="n">HomeController</span><span class="t">::</span><span class="k">class</span><span class="t">,</span> <span class="s">"home"</span><span class="t">]</span><span class="t">)</span><span class="t">;</span>
   <span class="k">$router</span><span class="t">-></span><span class="f">get</span><span class="t">(</span><span class="s">"/docs"</span><span class="t">,</span> <span class="t">[</span><span class="n">DocsController</span><span class="t">::</span><span class="k">class</span><span class="t">,</span> <span class="s">"index"</span><span class="t">]</span><span class="t">)</span><span class="t">;</span>
@@ -142,6 +152,7 @@ onBeforeUnmount(() => {
 
   <span class="c"># Start server</span>
   <span class="k">$app</span><span class="t">-></span><span class="f">run</span><span class="t">(</span><span class="n">8000</span><span class="t">)</span><span class="t">;</span></code></pre>
+              </div>
             </div>
           </div>
         </div>
@@ -270,24 +281,16 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-/* ===========================
-   Ivi.php — Product Page
-   Unique look (no Bootstrap)
-   =========================== */
-
 .ivi {
-  /* local palette (works on top of site tokens) */
   --ivi-bg: #060a12;
   --ivi-bg2: #070f1d;
   --ivi-panel: rgba(255, 255, 255, 0.04);
   --ivi-border: rgba(148, 163, 184, 0.16);
   --ivi-text: rgba(255, 255, 255, 0.92);
   --ivi-muted: rgba(203, 213, 225, 0.78);
-
   --ivi-accent: #00c37a;
   --ivi-accent2: #a7f3d0;
   --ivi-accentSoft: rgba(0, 195, 122, 0.14);
-
   color: var(--ivi-text);
 }
 
@@ -422,6 +425,7 @@ onBeforeUnmount(() => {
 .accent {
   color: var(--ivi-accent2);
 }
+
 .accent2 {
   color: #7dd3fc;
 }
@@ -462,6 +466,7 @@ onBeforeUnmount(() => {
   color: #06121a;
   box-shadow: 0 22px 46px rgba(0, 195, 122, 0.24);
 }
+
 .btn.primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 28px 54px rgba(0, 195, 122, 0.34);
@@ -472,6 +477,7 @@ onBeforeUnmount(() => {
   border-color: var(--ivi-border);
   color: rgba(231, 255, 246, 0.9);
 }
+
 .btn.ghost:hover {
   transform: translateY(-1px);
   border-color: rgba(0, 195, 122, 0.35);
@@ -485,7 +491,6 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
-
   background: rgba(2, 6, 23, 0.55);
   border: 1px solid var(--ivi-border);
   border-radius: 16px;
@@ -527,6 +532,7 @@ onBeforeUnmount(() => {
   transition: transform 160ms ease, background 160ms ease,
     border-color 160ms ease;
 }
+
 .copyBtn:hover {
   transform: translateY(-1px);
   background: rgba(0, 195, 122, 0.18);
@@ -583,18 +589,22 @@ onBeforeUnmount(() => {
   display: inline-flex;
   gap: 6px;
 }
+
 .lights span {
   width: 10px;
   height: 10px;
   border-radius: 999px;
   background: rgba(148, 163, 184, 0.55);
 }
+
 .lights span:nth-child(1) {
   background: #f97316;
 }
+
 .lights span:nth-child(2) {
   background: #eab308;
 }
+
 .lights span:nth-child(3) {
   background: #22c55e;
 }
@@ -608,6 +618,7 @@ onBeforeUnmount(() => {
 }
 
 .panelBody {
+  position: relative;
   padding: 14px 14px 12px;
   background: radial-gradient(
     circle at top,
@@ -616,15 +627,50 @@ onBeforeUnmount(() => {
   );
 }
 
-.panelBody pre {
+.codeScroll {
   margin: 0;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "JetBrains Mono",
-    monospace;
+  white-space: pre;
+  max-width: 100%;
+  padding-bottom: 6px;
+  scrollbar-gutter: stable both-edges;
   font-size: 13px;
   line-height: 1.6;
-  color: rgba(226, 232, 240, 0.95);
+  color: rgba(241, 245, 249, 0.96);
+}
+
+.codeScroll code {
+  display: inline-block;
+  min-width: max-content;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "JetBrains Mono",
+    monospace;
+}
+
+.panelBody::before,
+.panelBody::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 18px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.panelBody::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(2, 6, 23, 0.92),
+    rgba(2, 6, 23, 0)
+  );
+}
+
+.panelBody::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0));
 }
 
 .panelHint {
@@ -634,25 +680,29 @@ onBeforeUnmount(() => {
   line-height: 1.55;
 }
 
-/* tiny pseudo highlighting */
 .c {
-  color: rgba(148, 163, 184, 0.72);
+  color: rgba(148, 163, 184, 0.78);
   font-style: italic;
 }
+
 .k {
   color: #7dd3fc;
   font-weight: 700;
 }
+
 .t {
-  color: rgba(226, 232, 240, 0.75);
+  color: rgba(241, 245, 249, 0.78);
 }
+
 .f {
   color: #a7f3d0;
   font-weight: 700;
 }
+
 .s {
   color: #86efac;
 }
+
 .n {
   color: #fbbf24;
   font-weight: 700;
@@ -678,6 +728,7 @@ onBeforeUnmount(() => {
   font-size: 22px;
   letter-spacing: -0.01em;
 }
+
 .sectionHead p {
   margin: 0;
   color: var(--ivi-muted);
@@ -708,6 +759,7 @@ onBeforeUnmount(() => {
   gap: 10px;
   margin-bottom: 8px;
 }
+
 .icon {
   width: 34px;
   height: 34px;
@@ -736,6 +788,7 @@ onBeforeUnmount(() => {
   flex-wrap: wrap;
   gap: 8px;
 }
+
 .tag {
   font-size: 12px;
   padding: 5px 10px;
@@ -775,6 +828,7 @@ onBeforeUnmount(() => {
   font-weight: 900;
   margin-bottom: 4px;
 }
+
 .ecoDesc {
   color: var(--ivi-muted);
   line-height: 1.55;
@@ -788,7 +842,6 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
-
   border-radius: 18px;
   background: rgba(2, 6, 23, 0.55);
   border: 1px solid rgba(0, 195, 122, 0.18);
@@ -798,31 +851,40 @@ onBeforeUnmount(() => {
 .ctaTitle {
   font-weight: 950;
 }
+
 .ctaText {
   color: var(--ivi-muted);
   margin-top: 4px;
   max-width: 44rem;
   line-height: 1.55;
 }
+
 .ctaActions {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-/* reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 520ms ease, transform 520ms ease;
   will-change: opacity, transform;
 }
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* responsive */
+@media (min-width: 901px) {
+  .panelBody::before,
+  .panelBody::after {
+    width: 12px;
+    opacity: 0.6;
+  }
+}
+
 @media (max-width: 900px) {
   .heroGrid {
     grid-template-columns: minmax(0, 1fr);
@@ -835,6 +897,7 @@ onBeforeUnmount(() => {
   .card {
     grid-column: span 12;
   }
+
   .ecoCard {
     grid-column: span 12;
   }

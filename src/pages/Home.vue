@@ -2,8 +2,8 @@
 import Container from "../components/ui/Container.vue";
 import { SITE, LINKS } from "../app/config.js";
 
-import heroImg from "../assets/slide.png";
-import archImg from "../assets/architecture.png";
+const heroImg = "/images/slide.png";
+const archImg = "/images/architecture.png";
 </script>
 
 <template>

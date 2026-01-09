@@ -11,10 +11,10 @@ export const ROUTES = {
   customers: "/customers",
 
   company: "/company",
-  companyAbout: "/company/about",
-  companyCareers: "/company/careers",
-  companyCulture: "/company/culture",
-  companyContact: "/company/contact",
+  companyAbout: "/about",
+  companyCareers: "/careers",
+  companyCulture: "/culture",
+  companyContact: "/contact",
 
   /* Docs */
   docs: "/docs",
