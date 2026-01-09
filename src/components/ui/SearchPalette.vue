@@ -1,5 +1,12 @@
 <script setup>
-import { computed, nextTick, onBeforeUnmount, onMounted, ref } from "vue";
+import {
+  computed,
+  nextTick,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  watch,
+} from "vue";
 import { useRouter } from "vue-router";
 import { DOCS_PAGES } from "../../app/searchIndex.js";
 
@@ -102,14 +109,21 @@ onBeforeUnmount(() => {
   window.removeEventListener("keydown", onKeydown);
 });
 
-onMounted(async () => {
-  // focus when opened later
-});
-
 async function focusInput() {
   await nextTick();
   inputEl.value?.focus();
 }
+
+watch(
+  () => props.open,
+  async (v) => {
+    if (v) {
+      q.value = "";
+      active.value = 0;
+      await focusInput();
+    }
+  }
+);
 
 defineExpose({ focusInput });
 </script>
@@ -127,7 +141,14 @@ defineExpose({ focusInput });
           placeholder="Search docs…"
           autocomplete="off"
         />
-        <span class="kbd">Esc</span>
+        <button
+          class="closeBtn"
+          type="button"
+          aria-label="Close search"
+          @click="close"
+        >
+          ✕
+        </button>
       </div>
 
       <div v-if="results.length" class="list" role="listbox">
@@ -160,32 +181,46 @@ defineExpose({ focusInput });
 .overlay {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
-
   background: rgba(2, 6, 23, 0.55);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: clamp(16px, 4vw, 28px);
   padding-top: min(18vh, 160px);
-  padding-left: 16px;
-  padding-right: 16px;
 
   z-index: 2000;
 }
 
 .panel {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-
   width: min(760px, 100%);
+  max-height: calc(100vh - min(18vh, 160px) - 32px);
+
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--menu-bg);
   box-shadow: var(--menu-shadow);
   overflow: hidden;
+
+  position: relative;
+  left: auto;
+  transform: none;
+}
+
+.list {
+  max-height: none;
+  overflow: auto;
+}
+
+@media (max-width: 520px) {
+  .overlay {
+    padding-top: 12vh;
+  }
+  .panel {
+    border-radius: 14px;
+    width: 100%;
+  }
 }
 
 .top {
@@ -262,5 +297,27 @@ defineExpose({ focusInput });
 
 .hint {
   margin-top: 10px;
+}
+.closeBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--menu-border);
+  background: transparent;
+  color: var(--text-muted);
+
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background: var(--menu-item-hover-bg);
+  color: var(--text);
 }
 </style>
