@@ -31,7 +31,6 @@ const DARK_VALUE = "dark";
 let previousTheme = null;
 
 onMounted(() => {
-  // force dark on this page
   previousTheme = document.documentElement.getAttribute(THEME_ATTR);
   document.documentElement.setAttribute(THEME_ATTR, DARK_VALUE);
 
@@ -39,7 +38,6 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
-  // restore previous theme when leaving
   if (previousTheme === null)
     document.documentElement.removeAttribute(THEME_ATTR);
   else document.documentElement.setAttribute(THEME_ATTR, previousTheme);
@@ -76,14 +74,14 @@ onBeforeUnmount(() => {
 
             <p class="sub">
               Build distributed systems that stay responsive under real-world
-              network conditions — with native performance, no GC pauses, and a
+              network conditions with native performance, no GC pauses, and a
               Node-like developer experience.
             </p>
 
             <div class="cta">
               <a
                 class="btn primary"
-                :href="LINKS.vixSite + '/quickstart'"
+                :href="LINKS.vixSite"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -190,7 +188,7 @@ onBeforeUnmount(() => {
             <div class="icon">⚡</div>
             <h3>Incredible Performance</h3>
             <p>
-              Native throughput with predictable latency — no garbage collection
+              Native throughput with predictable latency no garbage collection
               pauses, no runtime overhead you can’t explain.
             </p>
             <div class="cardMeta">
@@ -278,25 +276,6 @@ onBeforeUnmount(() => {
                 </div>
               </div>
             </div>
-
-            <div class="miniCta">
-              <a
-                class="btn primary"
-                :href="LINKS.vixSite + '/quickstart'"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Start with Quickstart <span class="arrow">→</span>
-              </a>
-              <a
-                class="btn ghost"
-                :href="LINKS.vixGithub"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Browse the repo <span class="arrow">↗</span>
-              </a>
-            </div>
           </div>
 
           <!-- code sample (short) -->
@@ -341,13 +320,13 @@ onBeforeUnmount(() => {
           <h2 class="h2">Build with Vix.cpp</h2>
           <p class="lead">
             If you’re building offline-first, edge, or high-performance systems
-            in modern C++ — Vix is built for you.
+            in modern C++ Vix is built for you.
           </p>
 
           <div class="cta">
             <a
               class="btn primary"
-              :href="LINKS.vixSite + '/quickstart'"
+              :href="LINKS.vixSite"
               target="_blank"
               rel="noreferrer"
             >
