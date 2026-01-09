@@ -1,0 +1,15 @@
+:root {
+  --bg: #0b0d12;
+  --panel: #101522;
+  --text: #e8eefc;
+  --muted: rgba(232, 238, 252, 0.72);
+  --border: rgba(232, 238, 252, 0.12);
+
+  --accent: #ff9900; /* Softadastra orange */
+  --accent-2: #008037; /* ton vert (si utile) */
+
+  --radius: 16px;
+  --max: 1120px;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
