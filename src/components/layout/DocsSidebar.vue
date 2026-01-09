@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { useRoute, RouterLink } from "vue-router";
-import { NAV } from "../../app/config.js";
+import { NAV_DOCS } from "../../app/config.js";
 
 const route = useRoute();
 
@@ -22,7 +22,7 @@ function isActive(href) {
 <template>
   <aside aria-label="Documentation sidebar">
     <nav>
-      <div v-for="(group, gi) in NAV" :key="gi">
+      <div v-for="(group, gi) in NAV_DOCS" :key="gi">
         <div>
           <RouterLink
             :to="group.href"

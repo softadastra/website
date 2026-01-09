@@ -1,15 +1,66 @@
+/* ================================
+   Softadastra Design Tokens
+   Light / Dark (Vuejs-style)
+================================ */
+
+/* ---------- Base (LIGHT by default) ---------- */
 :root {
-  --bg: #0b0d12;
-  --panel: #101522;
-  --text: #e8eefc;
-  --muted: rgba(232, 238, 252, 0.72);
-  --border: rgba(232, 238, 252, 0.12);
+  /* Brand */
+  --sa-green: #103b2f;
+  --sa-green-2: #0b2b22;
+  --sa-orange: #d57a2a;
+  --sa-orange-2: #b8621f;
 
-  --accent: #ff9900; /* Softadastra orange */
-  --accent-2: #008037; /* ton vert (si utile) */
+  /* Page */
+  --bg: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
 
-  --radius: 16px;
-  --max: 1120px;
+  /* Navbar (light) */
+  --nav-bg: #ffffff;
+  --nav-border: rgba(0, 0, 0, 0.08);
+  --nav-text: #111827;
+  --nav-muted: #374151;
+  --nav-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  /* Pills / buttons */
+  --nav-pill: rgba(0, 0, 0, 0.04);
+  --nav-pill-hover: rgba(0, 0, 0, 0.08);
+
+  /* Layout */
+  --nav-max: 1200px;
+
+  /* Dropdown menu */
+  --menu-bg: #ffffff;
+  --menu-border: rgba(0, 0, 0, 0.1);
+  --menu-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+
+  --menu-item: rgba(17, 24, 39, 0.86);
+  --menu-item-hover-bg: rgba(0, 0, 0, 0.06);
+  --menu-item-hover: #111827;
+}
+
+/* ---------- DARK MODE ---------- */
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.72);
+
+  /* Navbar (dark like vuejs.org) */
+  --nav-bg: #111827;
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --nav-text: rgba(255, 255, 255, 0.92);
+  --nav-muted: rgba(255, 255, 255, 0.72);
+  --nav-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  --nav-pill: rgba(255, 255, 255, 0.06);
+  --nav-pill-hover: rgba(255, 255, 255, 0.1);
+
+  --menu-bg: #0b1220;
+  --menu-border: rgba(255, 255, 255, 0.1);
+  --menu-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+
+  --menu-item: rgba(255, 255, 255, 0.78);
+  --menu-item-hover-bg: rgba(255, 255, 255, 0.06);
+  --menu-item-hover: rgba(255, 255, 255, 0.92);
 }

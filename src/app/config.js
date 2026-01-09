@@ -15,7 +15,48 @@ export const LINKS = {
   youtube: "https://youtube.com/@softadastra",
 };
 
+/* Top navbar (website) */
 export const NAV = [
+  {
+    label: "Products",
+    href: ROUTES.products,
+    items: [
+      { label: "Vix.cpp Runtime", href: ROUTES.productVix },
+      { label: "Ivi.php Framework", href: ROUTES.productIvi },
+      { label: "Rix", href: ROUTES.productRix },
+      { label: "Cnerium", href: ROUTES.productCnerium },
+    ],
+  },
+  { label: "Customers", href: ROUTES.customers },
+
+  {
+    label: "Company",
+    href: ROUTES.company,
+    items: [
+      { label: "About", href: ROUTES.companyAbout },
+      {
+        label: "Careers",
+        href: ROUTES.companyCareers,
+        description: "We’re currently hiring!",
+      },
+      {
+        label: "Culture",
+        href: ROUTES.companyCulture,
+        description: "What we believe",
+      },
+      {
+        label: "Contact us",
+        href: ROUTES.companyContact,
+        description: "Request a demo",
+      },
+    ],
+  },
+
+  { label: "Docs", href: ROUTES.docs },
+];
+
+/* Docs sidebar only */
+export const NAV_DOCS = [
   {
     label: "Foundation",
     href: ROUTES.foundation,

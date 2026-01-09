@@ -4,6 +4,53 @@ This document provides a high-level architectural view of Softadastra.
 
 It explains how the different layers of the system interact and why the architecture is designed around **resilience, locality, and synchronization** rather than traditional request–response assumptions.
 
+```cpp
+#include <string>
+
+#include <vix.hpp>
+#include <vix/middleware/app/adapter.hpp>
+#include <vix/middleware/performance/compression.hpp>
+
+using namespace vix;
+
+int main()
+{
+    App app;
+
+    // Create a compression middleware (gzip / br)
+    auto compression_mw = vix::middleware::app::adapt_ctx(
+        vix::middleware::performance::compression({
+            .min_size = 8,     // compress only responses >= 8 bytes
+            .add_vary = true,  // add "Vary: Accept-Encoding"
+            .enabled = true,   // enable middleware
+        })
+    );
+
+    // Apply compression globally
+    app.use(std::move(compression_mw));
+
+    // Home route
+    app.get("/", [](Request &, Response &res){
+        res.send("Compression enabled. Try /x with Accept-Encoding.");
+    });
+
+    // Large response → compression will apply
+    app.get("/x", [](Request &, Response &res){
+        res.status(200).send(std::string(20, 'a'));
+    });
+
+    // Small response → no compression
+    app.get("/small", [](Request &, Response &res){
+        res.status(200).send("aaaa"); // 4 bytes
+    });
+
+    // Start HTTP server
+    app.run(8080);
+    return 0;
+}
+
+```
+
 ---
 
 ## Architectural center of gravity
