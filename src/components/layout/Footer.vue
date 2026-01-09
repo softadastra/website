@@ -39,9 +39,9 @@ const year = new Date().getFullYear();
 
           <div class="col">
             <div class="colTitle">Company</div>
-            <a class="link" href="/company/about">About</a>
-            <a class="link" href="/company/careers">Careers</a>
-            <a class="link" href="/company/contact">Contact</a>
+            <a class="link" href="/about">About</a>
+            <a class="link" href="/careers">Careers</a>
+            <a class="link" href="/contact">Contact</a>
           </div>
 
           <div class="col">
@@ -72,7 +72,7 @@ const year = new Date().getFullYear();
       <!-- Bottom -->
       <div class="bottom">
         <span class="muted">Cloud optional. Offline guaranteed.</span>
-        <a class="cta" href="/company/contact">Request a demo →</a>
+        <a class="cta" href="/contact">Request a demo →</a>
       </div>
     </Container>
   </footer>

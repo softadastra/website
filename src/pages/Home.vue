@@ -2,8 +2,10 @@
 import Container from "../components/ui/Container.vue";
 import { SITE, LINKS } from "../app/config.js";
 
-const heroImg = "/images/slide.png";
-const archImg = "/images/architecture.png";
+const heroImg =
+  "https://res.cloudinary.com/dwjbed2xb/image/upload/v1767987652/slide_mjoawy.png";
+const archImg =
+  "https://res.cloudinary.com/dwjbed2xb/image/upload/v1767987652/architecture_mhrlu6.png";
 </script>
 
 <template>
