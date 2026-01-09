@@ -130,12 +130,12 @@ html[data-theme="dark"] .sa-btn.ghost {
   border-color: rgba(255, 255, 255, 0.18);
 }
 :root {
-  --topbar-h: 62px;
+  --topbar-h: 0px;
 }
 
 @media (max-width: 980px) {
   :root {
-    --topbar-h: 58px;
+    --topbar-h: 0px;
   }
 }
 
