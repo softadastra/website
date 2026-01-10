@@ -29,7 +29,7 @@ const archImg =
             </p>
 
             <div class="ctaRow">
-              <RouterLink class="btn primary" to="/company/contact">
+              <RouterLink class="btn primary" to="/contact">
                 Request a demo
               </RouterLink>
               <RouterLink class="btn ghost" to="/docs">Read docs</RouterLink>
