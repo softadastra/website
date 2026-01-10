@@ -33,18 +33,6 @@ const archImg =
                 Request a demo
               </RouterLink>
               <RouterLink class="btn ghost" to="/docs">Read docs</RouterLink>
-
-              <a
-                class="btn icon"
-                :href="LINKS.github"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                title="GitHub"
-              >
-                <span class="iconDot" aria-hidden="true"></span>
-                GitHub
-              </a>
             </div>
 
             <div class="miniStats" aria-label="Highlights">
@@ -98,13 +86,6 @@ const archImg =
           <p class="earlyDesc">
             We’re currently working with early adopters and partners.
           </p>
-
-          <div class="earlyActions">
-            <RouterLink class="btn primary" to="/company/contact">
-              Request a demo
-            </RouterLink>
-            <RouterLink class="btn ghost" to="/docs">Read docs</RouterLink>
-          </div>
         </div>
       </Container>
     </section>
@@ -222,7 +203,7 @@ const archImg =
           <div class="footTitle">Cloud optional. Offline guaranteed.</div>
           <div class="footLinks">
             <RouterLink to="/docs">Docs</RouterLink>
-            <RouterLink to="/company/contact">Contact</RouterLink>
+            <RouterLink to="/contact">Contact</RouterLink>
             <a :href="LINKS.x" target="_blank" rel="noreferrer">X</a>
             <a :href="LINKS.youtube" target="_blank" rel="noreferrer"
               >YouTube</a

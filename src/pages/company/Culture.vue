@@ -124,12 +124,10 @@ import SitePage from "../../components/layout/SitePage.vue";
           real piece of the system.
         </p>
         <div class="ctaRow">
-          <RouterLink class="btn primary" to="/company/careers">
+          <RouterLink class="btn primary" to="/careers">
             View open roles
           </RouterLink>
-          <RouterLink class="btn ghost" to="/company/contact">
-            Contact
-          </RouterLink>
+          <RouterLink class="btn ghost" to="/contact"> Contact </RouterLink>
           <RouterLink class="btn ghost" to="/docs">Read docs</RouterLink>
         </div>
       </section>

@@ -2,7 +2,7 @@
 import SitePage from "../../components/layout/SitePage.vue";
 import { LINKS } from "../../app/config.js";
 
-const email = "gaspardkirira9@gmail.com";
+const email = "softadastra@gmail.com";
 
 const mailto = () => {
   const subject = encodeURIComponent("Softadastra — Contact");

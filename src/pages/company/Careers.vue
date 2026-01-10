@@ -41,7 +41,7 @@ const roles = [
 ];
 
 const mailto = () => {
-  const email = "gaspardkirira9@gmail.com";
+  const email = "softadastra@gmail.com";
   const subject = encodeURIComponent("Softadastra — Careers");
   const body = encodeURIComponent(
     [
@@ -96,14 +96,6 @@ const mailto = () => {
 
         <div class="ctaRow">
           <a class="btn primary" :href="mailto()">Email to apply</a>
-          <a
-            class="btn ghost"
-            :href="LINKS.github"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
           <a class="btn ghost" :href="LINKS.x" target="_blank" rel="noreferrer">
             X
           </a>
@@ -192,14 +184,6 @@ const mailto = () => {
             yourself. If your work matches the direction, we’ll propose
             ownership on a module.
           </p>
-          <a
-            class="btn primary"
-            :href="LINKS.github"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Go to GitHub
-          </a>
         </div>
       </section>
     </main>

@@ -1128,6 +1128,12 @@ html[data-theme="dark"] .finalCta {
   .caseCard {
     grid-column: span 6;
   }
+
+  .container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 0.1rem;
+  }
 }
 @media (max-width: 640px) {
   .caseCard {

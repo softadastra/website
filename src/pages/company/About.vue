@@ -61,10 +61,7 @@ import { LINKS } from "../../app/config.js";
 
         <div class="heroLinks">
           <RouterLink class="link" to="/docs">Read docs →</RouterLink>
-          <RouterLink class="link" to="/company/contact">Contact →</RouterLink>
-          <a class="link" :href="LINKS.github" target="_blank" rel="noreferrer">
-            GitHub →
-          </a>
+          <RouterLink class="link" to="/contact">Contact →</RouterLink>
         </div>
       </section>
 
@@ -191,9 +188,7 @@ import { LINKS } from "../../app/config.js";
         </p>
 
         <div class="ctaRow">
-          <RouterLink class="btn" to="/company/contact"
-            >Request a demo</RouterLink
-          >
+          <RouterLink class="btn" to="/contact">Request a demo</RouterLink>
           <RouterLink class="btn ghost" to="/docs">Read docs</RouterLink>
         </div>
       </section>
