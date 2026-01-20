@@ -5,8 +5,7 @@ export const SITE = {
   tagline: "Offline-first · Local-first · Resilient Web Runtime",
   description:
     "Softadastra is a foundational runtime built around a robust sync engine (WAL/outbox), secure P2P transport, and edge nodes for caching and store-and-forward. Cloud optional.",
-  logoUrl:
-    "https://res.cloudinary.com/dwjbed2xb/image/upload/v1762624310/logo-softadastra_ksv72b.png",
+  logoUrl: "/images/logo.png",
 };
 
 export const LINKS = {
@@ -33,7 +32,7 @@ export const SEO = {
 /* Top navbar (website) */
 export const NAV = [
   {
-    label: "Products",
+    label: "Stacks",
     href: ROUTES.products,
     items: [
       {

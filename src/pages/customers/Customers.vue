@@ -35,80 +35,81 @@ onBeforeUnmount(() => {
 
 const stats = [
   {
-    value: "+80%",
-    label: "Faster",
-    hint: "vs legacy stacks / baseline inference",
+    value: "0",
+    label: "Lost writes",
+    hint: "durable intent via WAL + outbox",
   },
   {
-    value: "+70%",
-    label: "Cost reduction",
-    hint: "higher utilization, fewer nodes",
+    value: "↓ 60–90%",
+    label: "Network-driven failures",
+    hint: "offline-first flows, no blocked UX",
   },
   {
-    value: "2–5×",
-    label: "Faster to production",
-    hint: "from prototype → deployment",
+    value: "Hours → Seconds",
+    label: "Recovery time",
+    hint: "fast replay, deterministic convergence",
   },
 ];
+
 
 const cards = [
   {
     type: "Customers",
-    company: "Inworld",
-    service: "Real-time audio synthesis & inference",
-    logo: "/images/inworld.jpg",
-    title: "~70% faster response time for streaming workloads",
-    desc: "Lower latency for chunked synthesis, higher QPS, and predictable scaling under real production traffic.",
+    company: "Confidential Customer",
+    service: "Field operations & intermittent connectivity",
+    logo: "/images/customer-confidential.png",
+    title: "Zero data loss during multi-hour outages",
+    desc: "Durable local writes with safe convergence once connectivity returns—without operator intervention.",
     href: "#",
     cta: "Read case study",
   },
   {
     type: "Customers",
-    company: "San Francisco Compute",
-    service: "GPU inference infrastructure & hosting",
-    logo: "/images/sfcompute.webp",
-    title: "Slashed inference costs by 80%",
-    desc: "Better utilization, fewer nodes, and a simpler path from prototype to stable production deployments.",
+    company: "Confidential Customer",
+    service: "Multi-site retail & inventory consistency",
+    logo: "/images/customer-confidential.png",
+    title: "Fewer incidents caused by flaky networks",
+    desc: "Edge store-and-forward keeps critical workflows running even when WAN links degrade or disappear.",
     href: "#",
     cta: "Read case study",
   },
   {
     type: "Partners",
-    company: "Qwerky AI",
-    service: "Cross-architecture deployment & portability",
-    logo: "/images/qwerky.jpg",
-    title: "Deploy across architectures without rewrites",
-    desc: "A consistent runtime surface to ship on cloud, on-prem, and edge with controlled performance.",
+    company: "Design Partner",
+    service: "Edge infrastructure & store-and-forward",
+    logo: "/images/partner-edge.png",
+    title: "Portable edge nodes across environments",
+    desc: "A consistent runtime surface for on-prem, constrained edge, and hybrid deployments.",
     href: "#",
     cta: "Read announcement",
   },
   {
     type: "Partners",
-    company: "AWS",
-    service: "Cloud & edge runtime environments",
-    logo: "/images/aws.png",
-    title: "Portable runtime foundations across environments",
-    desc: "A portability-first approach that keeps behavior predictable while preserving escape hatches for optimization.",
+    company: "Ecosystem Partner",
+    service: "Cloud/on-prem interoperability",
+    logo: "/images/partner-ecosystem.png",
+    title: "Cloud optional, management available",
+    desc: "Runs without cloud dependencies while preserving a path to enterprise governance and visibility.",
     href: "#",
     cta: "Read announcement",
   },
   {
     type: "Partners",
-    company: "NVIDIA",
-    service: "GPU acceleration & systems performance",
-    logo: "/images/nvidia.png",
-    title: "Higher throughput with stable latency under load",
-    desc: "Performance that holds under sustained concurrency—built for production, not only peak benchmarks.",
+    company: "Hardware Partner",
+    service: "Heterogeneous devices & constrained compute",
+    logo: "/images/partner-hardware.png",
+    title: "Same sync model across heterogeneous fleets",
+    desc: "Deterministic behavior across devices reduces operational surprises and simplifies rollouts.",
     href: "#",
     cta: "Read announcement",
   },
   {
     type: "Partners",
-    company: "AMD",
-    service: "Compute platforms & heterogeneous hardware",
-    logo: "/images/amd.png",
-    title: "Cross-platform optimization, same runtime model",
-    desc: "Ship once, run across heterogeneous stacks with deterministic behavior and measurable outcomes.",
+    company: "Transport Partner",
+    service: "Secure routing, relays & unreliable networks",
+    logo: "/images/partner-transport.png",
+    title: "Secure transport under unreliable networks",
+    desc: "Designed for partitions, delays, duplication, and churn—failure is the default case.",
     href: "#",
     cta: "Read announcement",
   },
@@ -165,15 +166,16 @@ const mailtoEngineers = computed(() => LINKS.engineersEmail);
             </div>
 
             <h1>
-              Enterprise innovation,
-              <span class="grad">supercharged by Vix.cpp</span>
+            Systems that stay correct under failure,
+            <span class="grad">offline-first by design</span>
             </h1>
 
             <p class="sub">
-              Vix.cpp delivers high-performance execution, cross-environment
-              portability, and engineering-grade reliability so your teams can
-              scale without surprises.
+              Softadastra is a foundational web runtime for local-first systems: durable
+              local writes, safe synchronization, secure transport, and edge
+              store-and-forward—cloud optional.
             </p>
+
           </div>
 
           <div class="heroRight reveal">

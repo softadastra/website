@@ -3,9 +3,9 @@ import Container from "../components/ui/Container.vue";
 import { SITE, LINKS } from "../app/config.js";
 
 const heroImg =
-  "https://res.cloudinary.com/dwjbed2xb/image/upload/v1767987652/slide_mjoawy.png";
+  "/images/slide.png";
 const archImg =
-  "https://res.cloudinary.com/dwjbed2xb/image/upload/v1767987652/architecture_mhrlu6.png";
+  "images/architecture.png";
 </script>
 
 <template>
@@ -18,6 +18,8 @@ const archImg =
             <div class="kicker">
               <span class="dot" aria-hidden="true"></span>
               <span>{{ SITE.tagline }}</span>
+              <span aria-hidden="true" style="opacity:.55">•</span>
+              <span style="opacity:.85">Cloud optional</span>
             </div>
 
             <h1 class="title">
@@ -25,28 +27,31 @@ const archImg =
             </h1>
 
             <p class="subtitle">
-              {{ SITE.description }}
+              A foundational runtime for the real internet: local-first execution,
+              durable intent, and safe synchronization—built for unreliable networks.
             </p>
 
             <div class="ctaRow">
               <RouterLink class="btn primary" to="/contact">
                 Request a demo
               </RouterLink>
-              <RouterLink class="btn ghost" to="/docs">Read docs</RouterLink>
+              <RouterLink class="btn ghost" to="/docs">
+                Read docs
+              </RouterLink>
             </div>
 
             <div class="miniStats" aria-label="Highlights">
               <div class="stat">
                 <div class="statTop">Offline-first</div>
-                <div class="statDesc">Local writes always accepted</div>
+                <div class="statDesc">Local writes are always accepted</div>
               </div>
               <div class="stat">
                 <div class="statTop">Sync engine</div>
                 <div class="statDesc">WAL · Outbox · Retries · Conflicts</div>
               </div>
               <div class="stat">
-                <div class="statTop">Cloud optional</div>
-                <div class="statDesc">Correctness never depends on it</div>
+                <div class="statTop">Edge + P2P</div>
+                <div class="statDesc">Secure transport · Store-and-forward</div>
               </div>
             </div>
           </div>
@@ -59,7 +64,6 @@ const archImg =
         </div>
       </Container>
 
-      <!-- waves like your visuals -->
       <div class="waves" aria-hidden="true">
         <div class="w w1"></div>
         <div class="w w2"></div>
@@ -73,8 +77,8 @@ const archImg =
         <div class="sectionHead">
           <h2>Teams building for reliability</h2>
           <p>
-            Softadastra is early. If you’re building local-first or
-            offline-first systems, we’d love to talk.
+            Softadastra is early. If you’re building local-first or offline-first
+            systems, we’d love to talk.
           </p>
         </div>
 
@@ -83,9 +87,24 @@ const archImg =
             <div class="earlyTitle">Early access</div>
             <div class="earlyPill">Foundation draft</div>
           </div>
+
           <p class="earlyDesc">
-            We’re currently working with early adopters and partners.
+            We work with a small number of design partners to validate the foundation
+            under real constraints: intermittent connectivity, offline operation,
+            and safe convergence at scale.
           </p>
+
+          <div class="earlyActions">
+            <RouterLink class="btn primary" to="/contact">
+              Talk to us
+            </RouterLink>
+            <RouterLink class="btn ghost" to="/customers">
+              See customers
+            </RouterLink>
+            <RouterLink class="btn ghost" to="/docs/architecture/overview">
+              Architecture
+            </RouterLink>
+          </div>
         </div>
       </Container>
     </section>
@@ -102,7 +121,6 @@ const archImg =
         </div>
 
         <div class="archGrid">
-          <!-- Poster -->
           <div class="archPoster">
             <div class="posterFrame">
               <img
@@ -113,9 +131,8 @@ const archImg =
             </div>
           </div>
 
-          <!-- Text + Layers -->
           <div class="archText">
-            <div class="layers">
+            <div class="layers" aria-label="Softadastra layers">
               <div class="layer app">
                 <div class="layerTitle">APP</div>
                 <div class="layerDesc">Your product layer</div>
@@ -133,9 +150,7 @@ const archImg =
 
               <div class="layer network">
                 <div class="layerTitle">NETWORK</div>
-                <div class="layerDesc">
-                  Secure P2P transport · Routing · Relays
-                </div>
+                <div class="layerDesc">Secure P2P transport · Routing · Relays</div>
               </div>
 
               <div class="layer edge">
@@ -178,18 +193,20 @@ const archImg =
           </div>
 
           <div class="whyCard">
-            <h3>Design premise</h3>
+            <h3>What changes</h3>
             <p>
-              Networks are unreliable. Failures are normal. Local execution is
-              mandatory. Softadastra makes resilience the default.
+              Softadastra shifts the center of gravity: from stateless requests to
+              durable intent, from server-first to local-first, from “retry later”
+              to safe convergence by design.
             </p>
           </div>
 
           <div class="whyCard">
-            <h3>Convergence</h3>
+            <h3>What you get</h3>
             <p>
-              Apps continue offline, accept local writes, and converge safely
-              once connectivity returns.
+              Applications continue offline, accept local writes immediately, and
+              converge safely once connectivity returns—without relying on the cloud
+              for correctness.
             </p>
           </div>
         </div>
@@ -203,17 +220,17 @@ const archImg =
           <div class="footTitle">Cloud optional. Offline guaranteed.</div>
           <div class="footLinks">
             <RouterLink to="/docs">Docs</RouterLink>
+            <RouterLink to="/customers">Customers</RouterLink>
             <RouterLink to="/contact">Contact</RouterLink>
             <a :href="LINKS.x" target="_blank" rel="noreferrer">X</a>
-            <a :href="LINKS.youtube" target="_blank" rel="noreferrer"
-              >YouTube</a
-            >
+            <a :href="LINKS.youtube" target="_blank" rel="noreferrer">YouTube</a>
           </div>
         </div>
       </Container>
     </section>
   </div>
 </template>
+
 
 <style scoped>
 /* ====== IMPORTANT: palette close to your images ======

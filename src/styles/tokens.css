@@ -9,7 +9,7 @@
   --max: 1200px;
 
   /* -------- Default = DARK -------- */
-  --bg: #0b1220;
+  --bg: #103b2f;
   --text: rgba(255, 255, 255, 0.92);
   --text-muted: rgba(255, 255, 255, 0.7);
 
@@ -17,7 +17,7 @@
   --border: rgba(255, 255, 255, 0.1);
 
   /* Navbar */
-  --nav-bg: rgba(11, 18, 32, 0.72);
+  --nav-bg: #103b2f;
   --nav-border: rgba(255, 255, 255, 0.1);
   --nav-text: rgba(255, 255, 255, 0.92);
   --nav-muted: rgba(255, 255, 255, 0.72);

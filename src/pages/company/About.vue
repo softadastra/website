@@ -7,7 +7,7 @@ import { LINKS } from "../../app/config.js";
   <SitePage
     kicker="Company"
     title="About"
-    description="Make the web work everywhere — resilient, offline-first, and local-first by default."
+    description="Softadastra is a foundational runtime for systems that must remain correct when networks fail."
   >
     <main class="aboutDoc">
       <!-- Minimal animated hero -->
@@ -17,15 +17,20 @@ import { LINKS } from "../../app/config.js";
             <div class="heroEyebrow">Softadastra</div>
             <h1>Make the web work everywhere.</h1>
             <p>
-              We’re rebuilding the web runtime so apps stay correct and usable
-              under real-world conditions: unreliable networks, offline periods,
-              edge deployments, and constrained devices.
+              We build a foundational web runtime designed for the real world:
+              intermittent connectivity, offline periods, constrained devices,
+              edge deployments, and environments where the cloud cannot be a
+              single point of truth.
+            </p>
+            <p>
+              Our premise is strict: <b>local execution is mandatory</b>, <b>durable
+              intent comes first</b>, and <b>systems must converge safely</b> when
+              connectivity returns.
             </p>
           </div>
 
           <div class="heroAnim" aria-hidden="true">
             <div class="lane">
-              <!-- "wifi" -->
               <div class="wifi">
                 <span class="arc a1"></span>
                 <span class="arc a2"></span>
@@ -33,13 +38,11 @@ import { LINKS } from "../../app/config.js";
                 <span class="dot"></span>
               </div>
 
-              <!-- "offline" -->
               <div class="offlineTag">
                 <span class="oDot"></span>
                 <span>OFFLINE</span>
               </div>
 
-              <!-- robots -->
               <div class="robots">
                 <div class="bot b1">
                   <span class="face"></span>
@@ -52,7 +55,6 @@ import { LINKS } from "../../app/config.js";
                 </div>
               </div>
 
-              <!-- trail -->
               <div class="trail t1"></div>
               <div class="trail t2"></div>
             </div>
@@ -61,113 +63,164 @@ import { LINKS } from "../../app/config.js";
 
         <div class="heroLinks">
           <RouterLink class="link" to="/docs">Read docs →</RouterLink>
+          <RouterLink class="link" to="/customers">Customers →</RouterLink>
           <RouterLink class="link" to="/contact">Contact →</RouterLink>
         </div>
       </section>
 
-      <!-- Text sections (simple like your screenshot) -->
+      <!-- Mission -->
       <section class="docSection">
-        <h2>🚀 Mission</h2>
+        <h2>Mission</h2>
         <p>
-          The modern web assumes permanent connectivity and centralized cloud
-          availability. We believe software should remain usable anywhere even
-          when networks fail.
+          Softadastra exists to rebuild the web so it remains usable and correct
+          under non-ideal conditions. Modern systems often assume permanent
+          connectivity and centralized cloud availability. In production, those
+          assumptions routinely break.
         </p>
         <p>
-          Our mission: build runtime foundations that make resilience the
-          default local-first correctness, offline-first behavior, and safe
-          convergence once connectivity returns.
+          Our mission is to make resilience a default property of the runtime:
+          <b>offline-first behavior</b>, <b>local-first correctness</b>, and
+          <b>safe convergence</b>—without requiring a cloud service for
+          correctness.
         </p>
       </section>
 
+      <!-- Problem -->
       <section class="docSection">
-        <h2>🤔 Problem</h2>
+        <h2>The problem we solve</h2>
         <p>
-          Today, most systems reject writes during outages, degrade into
-          read-only modes, or silently lose progress. Teams then fight symptoms:
-          retry storms, inconsistent state, manual conflict cleanup, and user
-          frustration.
+          When connectivity fails, most systems either reject writes, degrade
+          into fragile “best effort” modes, or rely on ad-hoc retries that
+          amplify outages. The result is predictable:
+          retry storms, inconsistent state, manual conflict cleanup, and lost
+          trust from users.
         </p>
         <p>
-          These failures are not edge cases. They are normal conditions in the
-          real world especially at the edge and in unstable networks.
+          These are not edge cases. They are normal operating conditions for
+          global software—especially across mobile networks, edge deployments,
+          multi-region environments, and any scenario where latency and
+          availability are not guaranteed.
         </p>
       </section>
 
+      <!-- Approach -->
       <section class="docSection">
-        <h2>💡 What we’re doing about it</h2>
+        <h2>How Softadastra works</h2>
         <p>
           Softadastra is organized around a clear architectural center:
-          <b>the sync engine</b>.
+          <b>the synchronization engine</b>.
         </p>
+
         <ul>
-          <li><b>WAL</b> for durability and correct local writes</li>
-          <li><b>Outbox</b> for delivery guarantees and replay</li>
-          <li><b>Retries</b> designed for unstable networks</li>
-          <li><b>Conflict handling</b> for safe convergence</li>
-          <li><b>Secure transport</b> (P2P, routing, relays, edge nodes)</li>
+          <li>
+            <b>Durable intent (WAL)</b> : every meaningful action is recorded
+            locally so progress is never lost.
+          </li>
+          <li>
+            <b>Outbox delivery</b> : changes are queued, replayed, and delivered
+            with predictable guarantees.
+          </li>
+          <li>
+            <b>Retry by design</b> : retries are explicit, observable, and
+            designed for unstable networks (not optimistic assumptions).
+          </li>
+          <li>
+            <b>Conflict handling</b> : convergence is a first-class primitive,
+            not a post-incident cleanup task.
+          </li>
+          <li>
+            <b>Secure networking</b> : peer-to-peer transport, routing, relays,
+            and edge nodes for store-and-forward and caching.
+          </li>
         </ul>
+
         <p>
-          The goal is simple: apps continue offline, accept local writes, and
-          converge safely later with cloud as an accelerator, not a dependency.
+          The goal is straightforward: applications continue offline, accept
+          local writes immediately, and converge safely later. The cloud can
+          accelerate synchronization and reach, but it must never be required
+          for correctness.
         </p>
       </section>
 
+      <!-- What this means for enterprises -->
       <section class="docSection">
-        <h2>💥 How it started</h2>
+        <h2>What enterprises gain</h2>
         <p>
-          Softadastra was founded by <b>Gaspard Kirira</b> (Founder & CEO) after
-          building systems where connectivity is never guaranteed.
+          Softadastra is built for teams that cannot afford “works most of the
+          time.” It provides a foundation to ship systems that remain predictable
+          under sustained concurrency and real-world failure modes.
         </p>
 
+        <ul>
+          <li>
+            <b>Reliability without heroics</b> : resilience is architectural, not
+            a late-stage patchwork of retries and incident runbooks.
+          </li>
+          <li>
+            <b>Correctness under failure</b> : durable local writes and explicit
+            synchronization semantics reduce data loss and surprise states.
+          </li>
+          <li>
+            <b>Portability across environments</b> : consistent runtime behavior
+            across cloud, on-prem, and constrained edge deployments.
+          </li>
+          <li>
+            <b>Operational clarity</b> : explicit state transitions, replayable
+            logs, and observable delivery pipelines.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Origin -->
+      <section class="docSection">
+        <h2>Why we started</h2>
         <p>
-          Softadastra started from building systems where connectivity is never
-          guaranteed. The more we worked on real deployment constraints, the
-          more it became obvious: the web needs new foundations not patches.
+          Softadastra began from a simple observation: the web has grown
+          powerful, but its foundations still assume ideal conditions. As systems
+          expand across regions, devices, and networks, those assumptions become
+          liabilities.
         </p>
         <p>
-          We’re building Softadastra to make reliability a default property of
-          the runtime, not an optional add-on.
+          We are building Softadastra as a long-term foundation effort—optimized
+          for correctness under failure, architectural coherence, and predictable
+          behavior in production.
         </p>
       </section>
 
-      <!-- LONG-TERM VISION -->
+      <!-- Long-term vision -->
       <section class="visionSection">
         <div class="visionGrid">
-          <!-- Text -->
           <div class="visionText">
             <div class="visionKicker">
               <span class="visionDot" aria-hidden="true"></span>
               <span>LONG-TERM VISION</span>
             </div>
 
-            <h2>A different kind of foundation</h2>
+            <h2>A foundation that outlives trends</h2>
 
             <p class="visionLead">
-              I’m <b>Gaspard Kirira</b>, <b>Founder & CEO</b> of Softadastra.
-              I’m building Softadastra for the long term — not for hype cycles,
-              not for short-term growth at the cost of correctness.
+              Softadastra is designed as a multi-year foundation effort. We are
+              not building a single product—we are building primitives that
+              enable entire categories of resilient systems.
             </p>
 
             <p>
-              I believe software infrastructure should remain usable and correct
-              everywhere, even when networks fail, environments change, or cloud
-              assumptions break.
+              The measure of success is not a demo. It is software that remains
+              correct after crashes, restarts, long disconnections, and changing
+              environments—software that users can trust.
             </p>
 
             <p>
-              My goal is to work with engineers, partners, and early adopters
-              who care about building durable foundations — systems that
-              continue to function reliably years from now, not just during
-              demos.
+              We collaborate with teams who care about deep infrastructure:
+              engineers and partners building systems that must operate
+              everywhere, not only in ideal cloud conditions.
             </p>
 
             <p class="visionFoot">
-              This is a long game. I’m building foundations meant to last.
+              Foundation first. Correctness under failure. Safe convergence.
             </p>
           </div>
 
-          <!-- Photo -->
           <div class="visionPhoto">
             <img
               src="/leadership/gaspard.jpeg"
@@ -179,12 +232,13 @@ import { LINKS } from "../../app/config.js";
         </div>
       </section>
 
+      <!-- Work with us -->
       <section class="docSection">
-        <h2>🤝 Work with us</h2>
+        <h2>Work with us</h2>
         <p>
-          If you’re building local-first or offline-first systems, we’d love to
-          talk. We’re early, moving fast, and collaborating with engineers who
-          care about correctness.
+          If your systems operate across unreliable networks, edge environments,
+          or latency-sensitive workloads and you want a foundation that stays
+          predictable under real conditions we should talk.
         </p>
 
         <div class="ctaRow">
@@ -195,6 +249,7 @@ import { LINKS } from "../../app/config.js";
     </main>
   </SitePage>
 </template>
+
 
 <style scoped>
 /* ======================================================
