@@ -187,7 +187,7 @@ import { LINKS } from "../../app/config.js";
         </p>
       </section>
 
-      <!-- Long-term vision -->
+     <!-- Long-term vision -->
       <section class="visionSection">
         <div class="visionGrid">
           <div class="visionText">
@@ -196,24 +196,26 @@ import { LINKS } from "../../app/config.js";
               <span>LONG-TERM VISION</span>
             </div>
 
-            <h2>A foundation that outlives trends</h2>
+            <h2>Building infrastructure that outlives trends</h2>
 
             <p class="visionLead">
-              Softadastra is designed as a multi-year foundation effort. We are
-              not building a single product—we are building primitives that
-              enable entire categories of resilient systems.
+              Softadastra is a long-term infrastructure initiative founded by
+              Gaspard Kirira, 26 years old, creator of Vix.cpp and Ivi.php.
+              The mission is not to launch a single product, but to design
+              foundational primitives that enable resilient systems at scale.
             </p>
 
             <p>
-              The measure of success is not a demo. It is software that remains
-              correct after crashes, restarts, long disconnections, and changing
-              environments—software that users can trust.
+              Success is not measured by short-term visibility. It is measured by
+              software that remains correct after crashes, restarts, long network
+              interruptions, and changing environments. Software that engineers and
+              users can rely on with confidence.
             </p>
 
             <p>
-              We collaborate with teams who care about deep infrastructure:
-              engineers and partners building systems that must operate
-              everywhere, not only in ideal cloud conditions.
+              We collaborate with teams that value deep infrastructure work.
+              Engineers and partners building systems that must operate reliably
+              in real-world conditions, not only in ideal cloud environments.
             </p>
 
             <p class="visionFoot">
@@ -224,7 +226,7 @@ import { LINKS } from "../../app/config.js";
           <div class="visionPhoto">
             <img
               src="/leadership/gaspard.jpeg"
-              alt="Gaspard Kirira — Founder & CEO of Softadastra"
+              alt="Gaspard Kirira, 26, Creator of Vix.cpp and Ivi.php"
               loading="lazy"
               decoding="async"
             />
