@@ -9,7 +9,7 @@
   --max: 1200px;
 
   /* -------- Default = DARK -------- */
-  --bg: #103b2f;
+  --bg: #0b1220;
   --text: rgba(255, 255, 255, 0.92);
   --text-muted: rgba(255, 255, 255, 0.7);
 
@@ -17,7 +17,7 @@
   --border: rgba(255, 255, 255, 0.1);
 
   /* Navbar */
-  --nav-bg: #103b2f;
+  --nav-bg: rgba(11, 18, 32, 0.72);
   --nav-border: rgba(255, 255, 255, 0.1);
   --nav-text: rgba(255, 255, 255, 0.92);
   --nav-muted: rgba(255, 255, 255, 0.72);
@@ -62,3 +62,4 @@ html[data-theme="light"] {
   --menu-item-hover: rgba(15, 23, 42, 0.92);
   --menu-item-hover-bg: rgba(15, 23, 42, 0.05);
 }
+
