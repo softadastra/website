@@ -187,7 +187,7 @@ import { LINKS } from "../../app/config.js";
         </p>
       </section>
 
-     <!-- Long-term vision -->
+        <!-- Long-term vision -->
       <section class="visionSection">
         <div class="visionGrid">
           <div class="visionText">
@@ -196,37 +196,27 @@ import { LINKS } from "../../app/config.js";
               <span>LONG-TERM VISION</span>
             </div>
 
-            <h2>Building infrastructure that outlives trends</h2>
+            <h2>Rebuilding the foundation of distributed systems</h2>
 
             <p class="visionLead">
               Softadastra is a long-term infrastructure initiative founded by
-              Gaspard Kirira, 26 years old, creator of Vix.cpp and Ivi.php.
-              The mission is not to launch a single product, but to design
-              foundational primitives that enable resilient systems at scale.
+              Gaspard Kirira, 26, Founder of Softadastra and creator of Vix.cpp and Ivi.php.
             </p>
 
             <p>
-              Success is not measured by short-term visibility. It is measured by
-              software that remains correct after crashes, restarts, long network
-              interruptions, and changing environments. Software that engineers and
-              users can rely on with confidence.
-            </p>
-
-            <p>
-              We collaborate with teams that value deep infrastructure work.
-              Engineers and partners building systems that must operate reliably
-              in real-world conditions, not only in ideal cloud environments.
+              We design local-first execution, durable writes, and synchronization as
+              a core primitive. Cloud is optional. Correctness is mandatory.
             </p>
 
             <p class="visionFoot">
-              Foundation first. Correctness under failure. Safe convergence.
+              Built for failure. Designed for resilience. Committed for the next decade.
             </p>
           </div>
 
           <div class="visionPhoto">
             <img
               src="/leadership/gaspard.jpeg"
-              alt="Gaspard Kirira, 26, Creator of Vix.cpp and Ivi.php"
+              alt="Gaspard Kirira, Founder of Softadastra"
               loading="lazy"
               decoding="async"
             />
@@ -237,21 +227,22 @@ import { LINKS } from "../../app/config.js";
       <!-- Work with us -->
       <section class="docSection">
         <h2>Work with us</h2>
+
         <p>
-          If your systems operate across unreliable networks, edge environments,
-          or latency-sensitive workloads and you want a foundation that stays
-          predictable under real conditions we should talk.
+          If you are building edge, distributed, or latency-sensitive systems,
+          and need infrastructure that remains correct under real-world conditions,
+          we should talk.
         </p>
 
         <div class="ctaRow">
-          <RouterLink class="btn" to="/contact">Request a demo</RouterLink>
-          <RouterLink class="btn ghost" to="/docs">Read docs</RouterLink>
+          <RouterLink class="btn" to="/contact">Partner with us</RouterLink>
+          <RouterLink class="btn ghost" to="/docs">Explore the foundation</RouterLink>
         </div>
       </section>
+
     </main>
   </SitePage>
 </template>
-
 
 <style scoped>
 /* ======================================================
